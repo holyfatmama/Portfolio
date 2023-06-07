@@ -4,9 +4,4 @@
 int main(void);
 
 // prompt name
-
-string name = get_string("What's your name?\n" );
-
-{
-    printf("hello, bitch\n");
-}
+string name = get_string("What's your name?\n");
