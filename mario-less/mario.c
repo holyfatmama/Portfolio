@@ -3,11 +3,14 @@
 
 int main(void)
 {
-    int n;
+    int height;
     do
     {
-        n = get_int("how high is the tower?\n");
+        height = get_int("how high is the tower?\n");
     }
-    while (n < 1 || n >  8);
-    for ()
+    while (height < 1 || height >  8);
+    for (int n = 0; n < height ; n++)
+    {
+        printf("#\n");
+    }
 }
