@@ -8,5 +8,8 @@ int main(void)
     {
         n = get_int("how high is the tower?\n");
     }
-    while (n <1);
+    while (0< n <8);
+}
+{
+    printf(1);
 }
