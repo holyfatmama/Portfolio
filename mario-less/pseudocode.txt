@@ -1,5 +1,7 @@
 ask for height between 1 and 8 while loop
 
+
+
 use get_int height = (what height? );
 while n number of hash is less than inputted number
 n count plus one until n number of hash is met
