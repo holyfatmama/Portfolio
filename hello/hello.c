@@ -4,4 +4,4 @@
 int main(void);
 
 // prompt name
-string name = get_string("What's your name?\n");
+string name = get_string("What's your name?\n ");
