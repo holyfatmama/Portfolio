@@ -1,0 +1,3 @@
+print n number of hash
+while n number of hash is less than inputted number
+n count plus one until n number of hash is met
