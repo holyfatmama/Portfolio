@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <cs50.h>
 
-int main(void)
+int main(void);
 
 // prompt name
 
-string name = get_string("What's your name?");
+string name = get_string("What's your name?" );
 
 {
     printf("hello, bitch\n");
