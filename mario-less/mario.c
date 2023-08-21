@@ -8,10 +8,14 @@ int main(void)
     {
         height = get_int("how high is the tower?\n");
     }
-    while (height < 1 || height >  8);
+    while (height < 1 || height > 8);
 
     for (int row = 0; row < height; row++)
     {
+        for (int space = 0; space < height - row - 1; space++)
+        {
+            printf(" ");
+        }
         for (int column = 0; column <= row; column++)
         {
             printf("#");
@@ -19,4 +23,3 @@ int main(void)
         printf("\n");
     }
 }
-        
