@@ -21,7 +21,7 @@ int main(void)
     // TODO: Print the winner
     if
     {
-    
+
     }
     printf(Player 1 wins!)
     else
@@ -31,4 +31,5 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+    for (int = 0, 
 }
