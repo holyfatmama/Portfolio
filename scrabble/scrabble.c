@@ -21,11 +21,11 @@ int main(void)
     // TODO: Print the winner
     if
     {
-        word1 > word2
+    
     }
     printf(Player 1 wins!)
     else
-    
+
 }
 
 int compute_score(string word)
