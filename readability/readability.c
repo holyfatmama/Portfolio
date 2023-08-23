@@ -3,15 +3,13 @@
 #include <ctype.h>
 
 
-int main(void)
+int main (void)
+int count_letters(string text)
+
 {
-    string text = get_string("Text:");
+    text = get_string("Text:");
     printf("%s\n", text);
 
-    int letters = count_letters(string text);
-    printf("%\n", letters);
-
-
-
-
+    int letters = count_letters(text);
+    printf("%i\n", letters);
 }
