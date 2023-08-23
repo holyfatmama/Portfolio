@@ -4,12 +4,11 @@
 
 
 int main (void)
-int count_letters(string text)
 
 {
-    text = get_string("Text:");
+    string text = get_string("Text:");
     printf("%s\n", text);
 
-    int letters = count_letters(text);
+    letters = int count_letters(text);
     printf("%i\n", letters);
 }
