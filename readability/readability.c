@@ -7,5 +7,5 @@ int main(void)
         string text = get_string("Text:");
     }
 
-    printf(text);
+    printf("%s", text);
 }
