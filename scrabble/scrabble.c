@@ -41,7 +41,7 @@ int compute_score(string word)
     {
         if(isupper(word[i]))
         {
-            score = score + 
+            score = score + points[word[i]] - 32
         }
     }
 }
