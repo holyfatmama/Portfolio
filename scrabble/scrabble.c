@@ -41,12 +41,12 @@ int compute_score(string word)
     // TODO: Compute and return score for string
     for (int i = 0; i < strlen(word); i++)
     {
-        if(isupper(word[i]))
+        if (isupper(word[i]))
         {
             score = score + POINTS[word[i] - 65];
         }
 
-        if(word[i] >= 97 && word[i]< 122)
+        if (word[i] >= 97 && word[i]< 122)
         {
             score = score + POINTS[word[i] - 97];
         }
