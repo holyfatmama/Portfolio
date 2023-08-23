@@ -8,6 +8,8 @@ int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 
 
 int compute_score(string word);
 
+int score;
+
 int main(void)
 {
     // Get input words from both players
@@ -41,7 +43,11 @@ int compute_score(string word)
     {
         if(isupper(word[i]))
         {
-            score = score + points[word[i]] - 32
+            score = score + POINTS[word[i]] - 32 - 65
+        }
+        else if(islower(word[i]))
+        {
+            score = score + POINTS[word[i]] - 65
         }
     }
 }
