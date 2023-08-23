@@ -8,8 +8,6 @@ int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 
 
 int compute_score(string word);
 
-int score;
-
 int main(void)
 {
     // Get input words from both players
@@ -23,11 +21,11 @@ int main(void)
     // TODO: Print the winner
     if (score1 > score2)
     {
-        printf("Player 1 wins");
+        printf("Player 1 wins\n");
     }
     else if (score2 > score1)
     {
-        printf("Player 2 wins");
+        printf("Player 2 wins\n");
     }
     else
     {
@@ -39,6 +37,9 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+
+    int score = 0
+    
     for (int i = 0; i < strlen(word); i++)
     {
         if (isupper(word[i]))
@@ -46,7 +47,7 @@ int compute_score(string word)
             score = score + POINTS[word[i] - 65];
         }
 
-        if (word[i] >= 97 && word[i]< 122)
+        if (islower(word[i]))
         {
             score = score + POINTS[word[i] - 97];
         }
