@@ -20,7 +20,7 @@ int count_letters(string text)
 {
     int counter = 0;
 
-    for (int i = 0; i< strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++)
     {
         if (isalpha(text[i]) != 0)
         counter++;
@@ -31,7 +31,13 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    int counter = 0
+    int counter = 0;
 
-    for (int i = 0; i<)
+    for (int i = 0; i < strlen(text); i++)
+    {
+        if (isblank(text[i]) !=0)
+        counter++;
+    }
+    printf("%i words\n", counter);
+    return counter;
 }
