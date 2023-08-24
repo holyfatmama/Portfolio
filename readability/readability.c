@@ -23,6 +23,5 @@ int count_letters(string text)
             letters = letters + 1;
         }
     }
-
    return letters
 }
