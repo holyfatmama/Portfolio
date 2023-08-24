@@ -6,6 +6,9 @@
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
+float L;
+float S;
+
 
 int main (void)
 {
@@ -18,7 +21,12 @@ int main (void)
 
     int sentences = count_sentences(text);
 
-    int index = 0.0588 * L - 0.296 * S - 15.8
+    int index = 0.0588 * L - 0.296 * S - 15.8;
+
+    L = letters/100;
+    S = sentences/100;
+
+    printf("%i grade\n", index);
 }
 
 int count_letters(string text)
@@ -63,3 +71,4 @@ int count_sentences(string text)
     printf("%i sentence(s)\n", sentences);
     return sentences;
 }
+
