@@ -39,11 +39,6 @@ int count_words(string text)
         {
             counter++;
         }
-        else if (ispunct(text[i]) !=0)
-        {
-            counter++;
-        }
-        else if 
     }
     printf("%i word(s)\n", counter);
     return counter;
