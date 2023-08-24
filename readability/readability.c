@@ -15,6 +15,8 @@ int main (void)
     int letters = count_letters(text);
 
     int words = count_words(text);
+
+    int sentences = count_sentences(text);
 }
 
 int count_letters(string text)
