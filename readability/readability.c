@@ -13,14 +13,12 @@ int main (void)
 
 int count_letters(string text)
 {
-   int letters = 0;
+    int letters = 0;
 
-   for (int i = 0; i< strlen(text); i++);
+    for (int i = 0; i< strlen(text); i++);
     {
-        if (isalpha(text[i]) != 0);
-        {
-            letters = letters + 1;
-        }
+        if (isalpha(text[i]) != 0)
+        letters = letters + 1
     }
    printf("%i\n", letters)
 }
