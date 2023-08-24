@@ -26,7 +26,19 @@ int main (void)
     L = letters/100;
     S = sentences/100;
 
-    printf("%i grade\n", index);
+    if (index < 1)
+    {
+        printf("Before grade one\n");
+    }
+    else if (index > 16)
+    {
+        printf("Grade 16+\n");
+    }
+    else
+    {
+        printf("%i grade\n", index);
+    }
+
 }
 
 int count_letters(string text)
