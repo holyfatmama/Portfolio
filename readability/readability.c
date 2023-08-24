@@ -24,3 +24,5 @@ int count_letters(string text)
     printf("%i letters\n", counter);
     return counter;
 }
+
+printf(string text\n);
