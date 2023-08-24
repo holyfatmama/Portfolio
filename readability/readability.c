@@ -9,7 +9,7 @@ int main (void)
 {
     string text = get_string("Text: ");
 
-    
+    int letters = count_letters(text);
 }
 
 int count_letters(string text)
