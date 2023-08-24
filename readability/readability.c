@@ -6,14 +6,11 @@
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
-float L;
-float S;
 
 
 int main (void)
 {
     string text = get_string("Text: ");
-    printf("%s\n", text);
 
     int letters = count_letters(text);
 
@@ -21,10 +18,11 @@ int main (void)
 
     int sentences = count_sentences(text);
 
-    int index = 0.0588 * L - 0.296 * S - 15.8;
 
-    L = letters/100;
-    S = sentences/100;
+    float L = letters/words * 100;
+    float S = sentences/100;
+
+    int index = 0.0588 * L - 0.296 * S - 15.8;
 
     if (index < 1)
     {
@@ -50,7 +48,6 @@ int count_letters(string text)
         if (isalpha(text[i]) != 0)
         letters++;
     }
-    printf("%i letters\n", letters);
     return letters;
 }
 
@@ -65,7 +62,6 @@ int count_words(string text)
             words++;
         }
     }
-    printf("%i word(s)\n", words);
     return words;
 }
 
@@ -80,7 +76,6 @@ int count_sentences(string text)
             sentences++;
         }
     }
-    printf("%i sentence(s)\n", sentences);
     return sentences;
 }
 
