@@ -35,7 +35,7 @@ int count_words(string text)
 
     for (int i = 0; i < strlen(text); i++)
     {
-        if (isspace(text[i]) !=0)
+        if (isspace(text[i]) !=0 || ispunct(text[i]) !=0)
         counter++;
     }
     printf("%i word(s)\n", counter);
