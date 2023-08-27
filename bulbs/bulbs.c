@@ -12,7 +12,8 @@ int main(void)
 
     int message = get_string("What is the message?\n")
 
-    for (int = 0)
+    for (int i = 0; i < strlen(message); i++)
+        
 
     message[i]
 }
