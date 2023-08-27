@@ -10,11 +10,11 @@ int main(void)
 {
     // TODO
 
-    string message = get_string("What is the message?\n")
+    string message = get_string("What is the message?\n");
 
     // Convert decimal to binary (8bit)
 
-    for (int i = 0; i < strlen(message); i++)
+    for (int i = 0; i < strlen(message); i++);
 
     int decimal = message[i];
 
