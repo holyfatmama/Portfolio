@@ -16,7 +16,7 @@ int main(void)
 
     for (int i = 0; i < strlen(message); i++)
         {
-            if message[i]
+            if message[i] % 2 == 0
         }
 
     // print bulbs
