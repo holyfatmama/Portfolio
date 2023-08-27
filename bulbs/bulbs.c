@@ -11,6 +11,8 @@ int main(void)
     // TODO
 
     int message = get_string("What is the message?\n")
+
+    
 }
 
 void print_bulb(int bit)
