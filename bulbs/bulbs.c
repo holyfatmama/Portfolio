@@ -25,15 +25,13 @@ int main(void)
         j++;
     }
 
+    // print bulbs
+
     for (int k = (BITS_IN_BYTE - 1); k => 0; k--)
     {
         prinf_bulb(binary[k])
     }
     printf("/n");
-
-    // print bulbs
-
-    message[i]
 }
 
 void print_bulb(int bit)
