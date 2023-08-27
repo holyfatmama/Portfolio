@@ -16,10 +16,8 @@ int main(void)
 
     for (int i = 0, n = strlen(message); i < n; i++)
     {
-    int decimal = message[i];
-
     int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
-
+    }
     int j = 0;
 
     while (decimal > 0)
