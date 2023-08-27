@@ -12,19 +12,25 @@ int main(void)
 
     string message = get_string("What is the message?\n");
 
-    // Convert decimal to binary (8bit)
+    // Go thru each of the characters of string message
 
     for (int i = 0, n = strlen(message); i < n; i++)
     {
-    int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
-    }
-    int j = 0;
+        int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
-    while (decimal > 0)
-    {
-        binary[j] = decimal % 2;
-        decimal / 2;
-        j++;
+        // convert decimal to ASCII
+
+        int decimal = message [i];
+
+        // Convert ASCII into binary
+        int j = 0;
+
+        while (decimal > 0)
+         {
+            binary[j] = decimal % 2;
+            decimal / 2;
+            j++;
+         }
     }
 
     // print bulbs
