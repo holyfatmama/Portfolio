@@ -35,14 +35,14 @@ int main(void)
 
     // print bulbs
 
-    for (int k = (BITS_IN_BYTE - 1); k => 0; k--)
+    for (int k = (BITS_IN_BYTE - 1); k >= 0; k--)
     {
-        prinf_bulb(binary[k]);
+        print_bulb(binary[k]);
     }
     printf("/n");
-    }
-
 }
+
+
 
 void print_bulb(int bit)
 {
