@@ -14,11 +14,15 @@ int main(void)
 
     // Convert decimal to binary (8bit)
 
-    for (int i = 0, n = strlen(message); i < n; i++);
-
+    for (int i = 0, n = strlen(message); i < n; i++)
+    {
     int decimal = message[i];
 
     int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
+
+    int j = 0;
+
+    while (decimal > 0)
     {
         binary[j] = decimal % 2;
         decimal / 2;
@@ -32,6 +36,8 @@ int main(void)
         prinf_bulb(binary[k])
     }
     printf("/n");
+    }
+
 }
 
 void print_bulb(int bit)
