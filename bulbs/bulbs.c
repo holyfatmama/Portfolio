@@ -9,7 +9,7 @@ void print_bulb(int bit);
 int main(void)
 {
     // Prompt user for input
-    string message = get_string("Message:\n");
+    string message = get_string("Message: ");
 
     // Go thru each of the characters of string message
     for (int i = 0, n = strlen(message); i < n; i++)
@@ -17,7 +17,7 @@ int main(void)
         int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
         // convert decimal to ASCII
-        int decimal = message [i];
+        int decimal = message[i];
 
         // Convert ASCII into binary
         int j = 0;
@@ -37,8 +37,6 @@ int main(void)
         printf("\n");
     }
 }
-
-
 
 void print_bulb(int bit)
 {
