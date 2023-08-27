@@ -29,11 +29,7 @@ int main(void)
     {
         prinf_bulb(binary[k])
     }
-
-    while decimal > 0
-    {
-
-    }
+    printf("/n");
 
     // print bulbs
 
