@@ -10,7 +10,7 @@ int main(void)
 {
     // TODO
 
-    int message = get_string("What is the message?\n")
+    string message = get_string("What is the message?\n")
 
     // Convert decimal to binary (8bit)
 
