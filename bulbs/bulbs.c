@@ -18,7 +18,12 @@ int main(void)
 
     int decimal = message[i];
 
-    int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
+    int binary[j] = {0, 0, 0, 0, 0, 0, 0, 0};
+
+    while decimal > 0
+    {
+        
+    }
 
     // print bulbs
 
