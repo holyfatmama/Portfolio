@@ -15,12 +15,8 @@ int main(void)
     // Convert decimal to binary (8bit)
 
     for (int i = 0; i < strlen(message); i++)
-        {
-            if message[i] % 2 == 0
-        }
-        {
-            else if message[i] % 2 == 1
-        }
+
+    int decimal = message[i]
 
     // print bulbs
 
