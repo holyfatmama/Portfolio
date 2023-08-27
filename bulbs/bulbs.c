@@ -10,7 +10,7 @@ int main(void)
 {
     // Prompt user for input
 
-    string message = get_string("What is the message?\n");
+    string message = get_string("Message:\n");
 
     // Go thru each of the characters of string message
 
