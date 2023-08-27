@@ -25,7 +25,10 @@ int main(void)
         j++;
     }
 
-    for (int k = 7; k => 0; k--)
+    for (int k = (BITS_IN_BYTE - 1); k => 0; k--)
+    {
+        prinf_bulb(binary[k])
+    }
 
     while decimal > 0
     {
