@@ -25,7 +25,7 @@ int main(void)
         j++;
     }
 
-    for (int k = )
+    for (int k = 7; k => 0; k--)
 
     while decimal > 0
     {
