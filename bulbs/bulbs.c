@@ -12,11 +12,14 @@ int main(void)
 
     int message = get_string("What is the message?\n")
 
+    // Convert decimal to binary (8bit)
+
     for (int i = 0; i < strlen(message); i++)
         {
             if message[i]
         }
 
+    // print bulbs
 
     message[i]
 }
