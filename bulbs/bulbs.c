@@ -14,7 +14,7 @@ int main(void)
 
     // Convert decimal to binary (8bit)
 
-    for (int i = 0; i < strlen(message); i++);
+    for (int i = 0, n = strlen(message); i < n; i++);
 
     int decimal = message[i];
 
@@ -24,6 +24,8 @@ int main(void)
         decimal / 2;
         j++;
     }
+
+    for (int k = )
 
     while decimal > 0
     {
