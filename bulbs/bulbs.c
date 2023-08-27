@@ -8,7 +8,7 @@ void print_bulb(int bit);
 
 int main(void)
 {
-    // TODO
+    // Prompt user for input
 
     string message = get_string("What is the message?\n");
 
@@ -33,7 +33,7 @@ int main(void)
 
     for (int k = (BITS_IN_BYTE - 1); k => 0; k--)
     {
-        prinf_bulb(binary[k])
+        prinf_bulb(binary[k]);
     }
     printf("/n");
     }
