@@ -16,7 +16,9 @@ int main(void)
 
     for (int i = 0; i < strlen(message); i++)
 
-    int decimal = message[i]
+    int decimal = message[i];
+
+    int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
     // print bulbs
 
