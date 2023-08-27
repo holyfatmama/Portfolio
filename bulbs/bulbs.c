@@ -18,6 +18,9 @@ int main(void)
         {
             if message[i] % 2 == 0
         }
+        {
+            else if message[i] % 2 == 1
+        }
 
     // print bulbs
 
