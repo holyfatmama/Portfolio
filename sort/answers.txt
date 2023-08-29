@@ -8,4 +8,4 @@ How do you know?: takes the shortest amount of times when compared to the other 
 
 sort3 uses: selection sort
 
-How do you know?: TODO
+How do you know?: by process of elimination, sort3 left is selection sort
