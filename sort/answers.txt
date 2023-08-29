@@ -1,6 +1,6 @@
 sort1 uses: bubble sort
 
-How do you know?: takes a shorter amount of time to compute sorted50000 when compared to sort3, and I already know that sort2 is merge sort so it leaves us with bubble sort as the answer
+How do you know?: ran the fastest on a sorted list compared to sort3
 
 sort2 uses: merge sort
 
