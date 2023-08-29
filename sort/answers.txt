@@ -1,11 +1,11 @@
-sort1 uses: TODO
+sort1 uses: bubble sort
 
-How do you know?: TODO
+How do you know?: takes a shorter amount of time to compute sorted50000 when compared to sort3, and I already know that sort2 is merge sort so it leaves us with bubble sort as the answer
 
-sort2 uses: TODO
+sort2 uses: merge sort
 
-How do you know?: TODO
+How do you know?: takes the shortest amount of times when compared to the other 2 sorting methods
 
-sort3 uses: TODO
+sort3 uses: selection sort
 
 How do you know?: TODO
