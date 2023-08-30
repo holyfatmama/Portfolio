@@ -90,6 +90,10 @@ void print_winner(void)
             maxvotes = candidates[i].votes
         }
     }
-    printf
+    if
+    {
+        candidates[i].votes = maxvotes
+    }
+    printf("%s", candidates[i].votes)
     return;
 }
