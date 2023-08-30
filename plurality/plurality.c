@@ -67,7 +67,8 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    if name == candidate[i].name
+    for (int j = 0; j < candidate[j].name; j++)
+    if name == candidate[j].name
     {
         votes++
     }
