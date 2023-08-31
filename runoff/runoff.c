@@ -130,7 +130,7 @@ bool vote(int voter, int rank, string name)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp/9)
+        if (strcmp(name, candidate))
     }
     return false;
 }
