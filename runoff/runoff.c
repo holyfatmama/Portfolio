@@ -16,7 +16,7 @@ typedef struct
     int votes;
     bool eliminated;
 }
-candidate;
+ycandidate;
 
 // Array of candidates
 candidate candidates[MAX_CANDIDATES];
@@ -164,7 +164,7 @@ bool print_winner(void)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > voter_count/2)
+        if (candidates[i].votes > voter_count / 2)
         {
             printf("%s\n", candidates[i].name);
             return true;
@@ -180,7 +180,7 @@ int find_min(void)
     int min = voter_count;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes < min && candidates[i].eliminated == false )
+        if (candidates[i].votes < min && candidates[i].eliminated == false)
         {
             min = candidates[i].votes;
         }
