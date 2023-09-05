@@ -199,19 +199,18 @@ bool is_tie(int min)
     int eliminiated = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidate[i].eliminated == false)
+        if (candidates[i].eliminated == false)
         {
-            eliminated++
+            eliminated++;
         }
-        if (candidate[i].votes = min)
+        if (candidates[i].votes = min)
         {
-            counter++
+            counter++;
         }
         if counter = eliminated
         {
             return true;
         }
-
     }
     return false;
 }
