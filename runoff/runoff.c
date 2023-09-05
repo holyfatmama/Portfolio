@@ -196,22 +196,22 @@ bool is_tie(int min)
 {
     // TODO
     int counter = 0;
-    int eliminiated = 0;
+    int eliminated = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].eliminated == false)
         {
             eliminated++;
         }
-        if (candidates[i].votes = min)
+        if (candidates[i].votes == min)
         {
             counter++;
         }
-        if counter = eliminated
+    }
+    if (eliminated == counter)
         {
             return true;
         }
-    }
     return false;
 }
 
@@ -221,7 +221,7 @@ void eliminate(int min)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes = min)
+        if (candidates[i].votes == min)
         {
             candidates[i].eliminated = true;
         }
