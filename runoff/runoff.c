@@ -166,7 +166,7 @@ bool print_winner(void)
     {
         if (candidates[i].votes > voter_count/2)
         {
-            printf("%s", candidates[i].name);
+            printf("%s\n", candidates[i].name);
             return true;
         }
     }
@@ -180,12 +180,9 @@ int find_min(void)
     int min = voter_count;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminated == false)
+        if (candidates[i].eliminated == false && candidates[i].votes < min)
         {
-            if (candidates[i].votes < min)
-            {
-                candidates[i].votes = min;
-            }
+            candidates[i].votes = min;
         }
     }
     return 0;
