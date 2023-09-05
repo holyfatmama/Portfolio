@@ -149,9 +149,11 @@ void tabulate(void)
         for (int = 0; j < candidate_count; j++)
         {
             if (candidates[preferences[i][j]].eliminated == false)
+            {
+                candidates[preferences[i][j]].votes++;
+                break;
+            }
         }
-        candidates[preferences[i][j]].votes++;
-        break;
     }
     return;
 }
@@ -160,6 +162,14 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    for (int = 0; i < candidate_count; i++)
+    {
+        if candidates[i].votes < ((voter_count)/2)
+        {
+            printf("%s", candidate[i].name)
+        }
+        return true
+    }
     return false;
 }
 
