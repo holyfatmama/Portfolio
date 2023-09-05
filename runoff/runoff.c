@@ -131,6 +131,7 @@ bool vote(int voter, int rank, string name)
     for (int i = 0; i < candidate_count; i++)
     {
         if (strcmp(name, prefrences[0][0]))
+        return true
     }
     return false;
 }
@@ -139,6 +140,10 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+    for (int = 0, i < candidate_count; i++)
+    {
+        if candidates[i].eliminated == true
+    }
     return;
 }
 
