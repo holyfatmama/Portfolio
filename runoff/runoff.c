@@ -206,9 +206,9 @@ bool is_tie(int min)
         }
     }
     if (eliminated == counter)
-        {
-            return true;
-        }
+    {
+        return true;
+    }
     return false;
 }
 
