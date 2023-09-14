@@ -8,7 +8,7 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int w = 0; w < width; w++)
         {
-            
+            image[h][w]
         }
     }
 }
