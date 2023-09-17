@@ -81,11 +81,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             for (int x = -1; x <= 1; x++)
             {
-                
-            }
-            for (int y = -1; y <= 1; y++)
-            {
+                for (int y = -1; y <= 1; y++)
+                {
 
+                }
             }
 
             int tempRed = ((image[i-1][j-1].rgbtRed + image[i-1][j].rgbtRed + image[i-1][j+1].rgbtRed + image[i][j-1].rgbtRed + image[i][j].rgbtRed + image[i][j+1].rgbtRed + image[i+1][j-1].rgbtRed + image[i+1][j].rgbtRed + image[i+1][j+1].rgbtRed)/9);
