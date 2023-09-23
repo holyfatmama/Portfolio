@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         // check if bytes are the start of a jpeg file
         if (buffer [0] == 0xff && buffer [1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xef)
         {
-
+            fwrite()
         }
     }
 
