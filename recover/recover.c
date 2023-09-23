@@ -25,8 +25,11 @@ int main(int argc, char *argv[])
     // Track number of images generated
     int image_count = 0;
 
+    // file pointer for recovered images
+    
+
     // look for jpeg file
-    if (buffer [0] == 0xff && buffer [1] == 0xd8 && buffer[2] == 0xff )
+    if (buffer [0] == 0xff && buffer [1] == 0xd8 && buffer[2] == 0xff)
 
     // write 512 bytes into new file until new jpeg file is found
 
