@@ -6,6 +6,7 @@
         "random": "c",
         "limits": "c",
         "algorithm": "c",
-        "array": "c"
+        "array": "c",
+        "stdlib.h": "c"
     }
 }
