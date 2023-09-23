@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     FILE *output_file = NULL;
 
     // allocate memory for name of file
-    char *
+    char *filename = malloc()
 
 
 
