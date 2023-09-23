@@ -8,12 +8,12 @@ int main(int argc, char *argv[])
     // check for two command line argument, else return an error
     if (argc != 2)
     {
-        printf("Usage: ./recover Image\n");
+        printf("Usage: ./recover IMAGE\n");
         return 1;
     }
 
     // open memory card
-    FILE *input_file = fopen (argv[1], "r");
+    FILE *input_file = fopen(argv[1], "r");
 
     // check if input_file is valid
     if (input_file == NULL)
