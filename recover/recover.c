@@ -13,6 +13,12 @@ int main(int argc, char *argv[])
     // open memory card
     FILE *input_file = fopen (argv[1], "r");
 
+    // check if input_file is valid
+    if (input_file = NULL)
+    {
+        printf("no input file found\n");
+    }
+
     // look for jpeg file
     if (buffer [0] == 0xff && buffer [1] == 0xd8 && buffer[2] == 0xff )
 
