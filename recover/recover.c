@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     while (fread(buffer, sizeof(char), 512, input_file))
     {
         // check if bytes are the start of a jpeg file
-        if (buffer [0] == 0xff && buffer [1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xef)
+        if (buffer [0] == 0xff && buffer [1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             // write the jpeg filenames
             sprintf(filename, "%3i.jpg", image_count);
