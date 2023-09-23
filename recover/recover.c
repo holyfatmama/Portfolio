@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     }
 
     // store blocks of 512 bytes in an array
-    unsigned char buffer[512;
+    unsigned char buffer[512];
 
     // Track number of images generated
     int image_count = 0;
