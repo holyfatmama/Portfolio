@@ -33,9 +33,10 @@ int main(int argc, char *argv[])
     // allocate memory for name of file, char filename[8]
     char *filename = malloc(8* sizeof(char))
 
+    // open file
+    fread(buffer, sizeof(char), 512, argv[1]);
 
 
-    // look for jpeg file
     if (buffer [0] == 0xff && buffer [1] == 0xd8 && buffer[2] == 0xff)
 
     // write 512 bytes into new file until new jpeg file is found
