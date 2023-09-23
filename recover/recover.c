@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     // file pointer for recovered images
     FILE *output_file = NULL;
 
-    // allocate memory for name of file
+    // allocate memory for name of file, char filename[8]
     char *filename = malloc()
 
 
