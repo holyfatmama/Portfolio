@@ -54,12 +54,4 @@ int main(int argc, char *argv[])
             }
         }
     }
-
-
-
-
-    // write 512 bytes into new file until new jpeg file is found
-
-
-
 }
