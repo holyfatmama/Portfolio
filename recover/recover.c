@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     char *filename = malloc(8* sizeof(char))
 
     // open file
-    while (fread(buffer, sizeof(char), 512, argv[1]))
+    while (fread(buffer, sizeof(char), 512, input_file))
     {
         // check if bytes are the start of a jpeg file
         if (buffer [0] == 0xff && buffer [1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xef)
@@ -46,6 +46,13 @@ int main(int argc, char *argv[])
             output_file = fopen(filename, "w");
         }
 
+        image_count++;
+        {
+            if (output_file != NULL)
+            {
+                fwrite(buffer, sizeof(char), 512, output_file);
+            }
+        }
     }
 
 
