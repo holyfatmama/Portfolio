@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     FILE *output_file = NULL;
 
     // allocate memory for name of file, char filename[8]
-    char *filename = malloc(8* sizeof(char));
+    char *filename = malloc(8 * sizeof(char));
 
     // open file
     while (fread(buffer, sizeof(char), 512, input_file))
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
                 fclose(output_file);
             }
             // write the jpeg filenames
-            sprintf(filename, "%3i.jpg", count_image);
+            sprintf(filename, "%03i.jpg", count_image);
 
             // open output file
             output_file = fopen(filename, "w");
