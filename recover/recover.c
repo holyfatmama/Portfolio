@@ -21,7 +21,10 @@ int main(int argc, char *argv[])
 
     // store blocks of 512 bytes in an array
     unsigned char buffer[512;
-    ]
+
+    // Track number of images generated
+    int image_count = 0;
+
     // look for jpeg file
     if (buffer [0] == 0xff && buffer [1] == 0xd8 && buffer[2] == 0xff )
 
