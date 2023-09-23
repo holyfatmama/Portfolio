@@ -11,4 +11,6 @@ int main(int argc, char *argv[])
 
     // write 512 bytes until new jpeg file is found
 
+    // fread(data, size, number, inputr)
+
 }
