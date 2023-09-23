@@ -39,8 +39,12 @@ int main(int argc, char *argv[])
         // check if bytes are the start of a jpeg file
         if (buffer [0] == 0xff && buffer [1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xef)
         {
+            // write the jpeg filenames
             sprintf(output_file, "%3i.jpg", image_count);
-            FILE *filename = fopen(output_file, "w");
+
+            // open output file
+            output_file = fopen(filename, "w");
+
             fwrite(buffer, sizeof(char), 512,)
         }
 
