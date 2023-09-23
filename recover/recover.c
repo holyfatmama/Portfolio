@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
     FILE *input_file = fopen (argv[1], "r");
 
     // look for jpeg file
+    if (buffer [0] == 0xff && buffer [1] == )
     
     // write 512 bytes until new jpeg file is found
 
