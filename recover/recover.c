@@ -10,9 +10,8 @@ int main(int argc, char *argv[])
         return 1;
     }
     // open memory card
-    FILE *f = fopen (argv[1], "r");
+    FILE *input_file = fopen (argv[1], "r");
 
-    
     // look for jpeg file
 
     // write 512 bytes until new jpeg file is found
