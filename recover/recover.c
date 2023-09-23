@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     unsigned char buffer[512];
 
     // Track number of images generated
-    int image_count = 0;
+    int count_image = 0;
 
     // file pointer for recovered images
     FILE *output_file = NULL;
@@ -39,14 +39,18 @@ int main(int argc, char *argv[])
         // check if bytes are the start of a jpeg file
         if (buffer [0] == 0xff && buffer [1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
+            if (count_image > 0)
+            {
+                fclose(output_file);
+            }
             // write the jpeg filenames
-            sprintf(filename, "%3i.jpg", image_count);
+            sprintf(filename, "%3i.jpg", count_image);
 
             // open output file
             output_file = fopen(filename, "w");
         }
 
-        image_count++;
+        count_image++;
         {
             if (output_file != NULL)
             {
@@ -54,4 +58,9 @@ int main(int argc, char *argv[])
             }
         }
     }
+    free(filename);
+    fclose(output_file);
+    fclose(input_file);
+
+    return 0;
 }
