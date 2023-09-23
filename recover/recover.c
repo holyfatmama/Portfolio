@@ -44,8 +44,6 @@ int main(int argc, char *argv[])
 
             // open output file
             output_file = fopen(filename, "w");
-
-            fwrite(buffer, sizeof(char), 512,)
         }
 
     }
