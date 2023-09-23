@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     FILE *input_file = fopen (argv[1], "r");
 
     // check if input_file is valid
-    if (input_file = NULL)
+    if (input_file == NULL)
     {
         printf("no input file found\n");
     }
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     FILE *output_file = NULL;
 
     // allocate memory for name of file, char filename[8]
-    char *filename = malloc(8* sizeof(char))
+    char *filename = malloc(8* sizeof(char));
 
     // open file
     while (fread(buffer, sizeof(char), 512, input_file))
