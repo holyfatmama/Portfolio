@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-typedef uint_
+typedef uint_8 BYTE;
+
 int main(int argc, char *argv[])
 {
     // check for two command line argument, else return an error
@@ -30,7 +31,7 @@ int main(int argc, char *argv[])
     FILE *output_file = NULL;
 
     // allocate memory for name of file, char filename[8]
-    char *filename = malloc(8* )
+    char *filename = malloc(8* sizeof(char))
 
 
 
