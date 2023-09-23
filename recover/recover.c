@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
     // check if input_file is valid
     if (input_file == NULL)
     {
-        printf("no input file found\n");
+        printf("Could not open file\n");
+        return 2;
     }
 
     // store blocks of 512 bytes in an array
