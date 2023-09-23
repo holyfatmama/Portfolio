@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     int image_count = 0;
 
     // file pointer for recovered images
-    
+    FILE *output
 
     // look for jpeg file
     if (buffer [0] == 0xff && buffer [1] == 0xd8 && buffer[2] == 0xff)
