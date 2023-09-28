@@ -40,7 +40,7 @@ int main(void)
 person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
-    person *p = malloc(sizeof(person))
+    person *p = malloc(sizeof(person));
 
     // If there are still generations left to create
     if (generations > 1)
@@ -55,7 +55,7 @@ person *create_family(int generations)
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
         p->alleles[0] =
-        p->alleles[1] = 
+        p->alleles[1] =
 
     }
 
