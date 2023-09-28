@@ -54,8 +54,8 @@ person *create_family(int generations)
         p->parent[1] = parent1
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
-        p->alleles[0] = 
-        p->alleles[1] =
+        p->alleles[0] = person *parent0.alleles[rand ()%2]
+        p->alleles[1] = person *parent0.alleles[rand ()%2]
 
     }
 
@@ -82,7 +82,8 @@ void free_family(person *p)
     // TODO: Handle base case
     free(p)
     // TODO: Free parents recursively
-    free(p->parent[0])
+    free(parent0)
+    free(parent1)
     // TODO: Free child
 
 }
