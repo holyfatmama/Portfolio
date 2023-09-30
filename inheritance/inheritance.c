@@ -34,6 +34,8 @@ int main(void)
 
     // Free memory
     free_family(p);
+
+    printf("&i\n", sizeof(person));
 }
 
 // Create a new individual with `generations`
@@ -128,10 +130,12 @@ void print_family(person *p, int generation)
         printf("Grandparent (Generation %i): blood type %c%c\n", generation, p->alleles[0], p->alleles[1]);
     }
 
+
     // Print parents of current generation
     print_family(p->parents[0], generation + 1);
     print_family(p->parents[1], generation + 1);
 }
+
 
 // Randomly chooses a blood type allele.
 char random_allele()
