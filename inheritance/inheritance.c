@@ -56,9 +56,8 @@ person *create_family(int generations)
         p->parents[1] = parent1;
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
-        p->alleles[0] = p->parents[0] -> alleles[rand ()%2];
-        p->alleles[1] = p->parents[1] -> alleles[rand ()%2];
-
+        p->alleles[0] = p->parents[0]->alleles[rand() % 2];
+        p->alleles[1] = p->parents[1]->alleles[rand() % 2];
     }
 
     // If there are no generations left to create
@@ -71,7 +70,6 @@ person *create_family(int generations)
         // TODO: Randomly assign alleles
         p->alleles[0] = random_allele();
         p->alleles[1] = random_allele();
-
     }
 
     // TODO: Return newly created person
@@ -130,12 +128,10 @@ void print_family(person *p, int generation)
         printf("Grandparent (Generation %i): blood type %c%c\n", generation, p->alleles[0], p->alleles[1]);
     }
 
-
     // Print parents of current generation
     print_family(p->parents[0], generation + 1);
     print_family(p->parents[1], generation + 1);
 }
-
 
 // Randomly chooses a blood type allele.
 char random_allele()
