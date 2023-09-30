@@ -35,7 +35,7 @@ int main(void)
     // Free memory
     free_family(p);
 
-    printf("%lu\n", sizeof(person));
+    printf("%lu\n", sizeof(*p));
 }
 
 // Create a new individual with `generations`
