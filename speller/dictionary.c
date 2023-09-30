@@ -29,25 +29,25 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
+    // TODO: Improve this hash function, use some sort of for loop, A is a char (ascii)
     return toupper(word[0]) - 'A';
 }
 
-// Loads dictionary into memory, returning true if successful, else false
+// Loads dictionary into memory, returning true if successful, else false, use malloc
 bool load(const char *dictionary)
 {
     // TODO
     return false;
 }
 
-// Returns number of words in dictionary if loaded, else 0 if not yet loaded
+// Returns number of words in dictionary if loaded, else 0 if not yet loaded (use printf and print number of words)
 unsigned int size(void)
 {
     // TODO
     return 0;
 }
 
-// Unloads dictionary from memory, returning true if successful, else false
+// Unloads dictionary from memory, returning true if successful, else false (use free memory)
 bool unload(void)
 {
     // TODO
