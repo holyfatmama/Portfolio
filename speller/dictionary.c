@@ -56,7 +56,9 @@ bool load(const char *dictionary)
 
     for (int i = 0; i < counter; i++)
     {
-        fscanf(file, %s, ")
+        fscanf(file, %s, n);
+        n++;
+        counter++
     }
 
     // create new node for each word
