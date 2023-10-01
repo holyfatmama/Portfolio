@@ -71,7 +71,8 @@ bool load(const char *dictionary)
 
         // insert node into hash value
         n->next = table[hash_value]
-        
+        table[hash_value] = n
+        word_count++
     }
 
 
