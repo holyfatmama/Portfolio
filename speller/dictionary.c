@@ -49,14 +49,14 @@ bool load(const char *dictionary)
         printf("File is empty\n");
     }
     // read strings from file
-    int n = 0;
-    node *n = malloc(sizeof(node));
 
     int counter = 1;
 
-    for (int i = 0; i < counter; i++)
+    for (int i = 0, int counter = 1; i < counter; i++)
     {
         fscanf(file, %s, n);
+        int n = 0;
+        node *n = malloc(sizeof(node));
         n++;
         counter++
     }
