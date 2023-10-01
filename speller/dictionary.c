@@ -118,10 +118,10 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    
     for (int i = 0; i < N; i++)
     {
-        free(table[i])
+
     }
     return false;
 }
- 
