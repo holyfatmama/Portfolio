@@ -64,6 +64,8 @@ bool load(const char *dictionary)
     // TODO
     // open dictionary file
     FILE *file = fopen("dictionary", "r");
+
+    // return NULL if file cannot be opened
     if (file == NULL)
     {
         printf("Unable to open %s\n", dictionary);
