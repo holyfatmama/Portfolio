@@ -63,7 +63,7 @@ bool load(const char *dictionary)
         }
         else
         {
-            
+            st
         }
         n++;
         counter++
