@@ -59,7 +59,7 @@ unsigned int hash(const char *word)
     {
         total += tolower(word[i]);
     }
-    return (total % N);
+    return total % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
