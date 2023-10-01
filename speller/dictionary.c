@@ -82,8 +82,6 @@ bool load(const char *dictionary)
         word_count++
     }
 
-
-    // insert node into hash table at that location
     return false;
 }
 
