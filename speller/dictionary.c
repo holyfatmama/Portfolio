@@ -24,7 +24,10 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    
+    // open dictionary file
+    // read strings from file
+    // create new node for each word
+    // hash word to obtain a hash value
     return false;
 }
 
