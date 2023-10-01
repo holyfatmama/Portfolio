@@ -78,13 +78,13 @@ bool load(const char *dictionary)
     }
 
     // read strings from file, return null if theres nothing
-    char *word[LENGTH + 1];
+    char word[LENGTH + 1];
 
     // allocate memory and copy word into pointer while scanning the entire file for words
     while (fscanf(file, "%s", word) != EOF)
     {
         // allocate memory
-        node n* = malloc(sizeof(node));
+        node *n = malloc(sizeof(node));
 
         // return false if no memory is allocated
         if (n == NULL)
@@ -93,14 +93,14 @@ bool load(const char *dictionary)
         }
 
         //copy word into pointer n.word
-        strcpy (n.word, word);
+        strcpy (n->word, word);
 
         // obtain hash value
         hash_value = hash(word);
 
         // insert node into hash value
-        n.next = table[hash_value];
-        table[hash_value] = &n;
+        n->next = table[hash_value];
+        table[hash_value] = n;
         word_count++;
     }
     fclose(file);
