@@ -50,12 +50,12 @@ bool load(const char *dictionary)
     }
     // read strings from file, return null if theres nothing
     char *word[LENGTH + 1];
-    
-    fscanf(file, "%s", word);
-    if (word == NULL)
+
+    while(fscanf(file, "%s", word) != EOF)
     {
-        return;
+        node n* = malloc(sizeof(node))
     }
+
     // create new node for each word using malloc
     node n* = malloc(sizeof(node));
 
