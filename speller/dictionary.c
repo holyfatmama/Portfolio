@@ -45,16 +45,19 @@ bool load(const char *dictionary)
     FILE *file = fopen("dictionary", "r");
     if (*file == NULL)
     {
-        printf("File is empty\n");
-        return;
+        printf("Unable to open %s\n", dictionary);
+        return false;
     }
     // read strings from file, return null if theres nothing
+    char *word[LENGTH + 1];
+    
     fscanf(file, "%s", word);
     if (word == NULL)
     {
         return;
     }
     // create new node for each word using malloc
+    node n* = malloc(sizeof(node));
 
     // hash word to obtain a hash value
 
