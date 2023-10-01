@@ -57,7 +57,10 @@ bool load(const char *dictionary)
         fscanf(file, %s, n);
         int n = 0;
         node *n = malloc(sizeof(node));
-        if
+        if (n == NULL)
+        {
+            return 
+        }
         n++;
         counter++
     }
