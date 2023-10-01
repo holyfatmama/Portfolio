@@ -69,8 +69,6 @@ bool load(const char *dictionary)
         hash_value = hash(word);
 
         // insert node into hash value
-        node *hash_value = NULL
-        hash_value = n->word
     }
 
 
