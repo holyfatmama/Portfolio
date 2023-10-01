@@ -52,6 +52,10 @@ bool load(const char *dictionary)
     int n = 0;
     node *n = malloc(sizeof(node));
 
+    int counter = 0;
+    counter++;
+
+    for (int i = 0; i < counter; i++)
     fscanf(file, %s, ")
     // create new node for each word
     // hash word to obtain a hash value
