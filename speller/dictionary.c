@@ -31,10 +31,9 @@ unsigned int hash_value;
 bool check(const char *word)
 {
     // TODO
-    char *word2 = hash(word);
-    node *cursor = malloc(sizeof(node));
-    cursor = table[word2]
-    while (strcasecmp(word2, table[word2]->word) == false)
+    hash_value = hash(word);
+    node *cursor = table[hash_value];
+    while (strcasecmp(hash_value, table[hash_value]->word) == false)
     {
         cursor = cursor -> next;
     }
