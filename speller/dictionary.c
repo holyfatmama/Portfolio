@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <strings.h>
 
 #include "dictionary.h"
 
@@ -39,7 +39,7 @@ bool check(const char *word)
     node *cursor = table[hash_value];
 
     // go through the linked list
-    while (cursor != 0)
+    while (cursor != NULL)
     {
         if (strcasecmp(word, cursor->word) == 0)
         {
