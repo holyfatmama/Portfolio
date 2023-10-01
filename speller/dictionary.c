@@ -64,7 +64,7 @@ bool load(const char *dictionary)
     // TODO
     // open dictionary file
     FILE *file = fopen("dictionary", "r");
-    if (*file == NULL)
+    if (file == NULL)
     {
         printf("Unable to open %s\n", dictionary);
         return false;
@@ -74,7 +74,7 @@ bool load(const char *dictionary)
     char *word[LENGTH + 1];
 
     // allocate memory and copy word into pointer while scanning the entire file for words
-    while(fscanf(file, "%s", word) != EOF)
+    while (fscanf(file, "%s", word) != EOF)
     {
         // allocate memory
         node n* = malloc(sizeof(node));
