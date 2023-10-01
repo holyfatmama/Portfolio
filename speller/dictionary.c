@@ -47,6 +47,7 @@ bool load(const char *dictionary)
         printf("Unable to open %s\n", dictionary);
         return false;
     }
+
     // read strings from file, return null if theres nothing
     char *word[LENGTH + 1];
 
@@ -65,7 +66,7 @@ bool load(const char *dictionary)
         //copy word into pointer n.word
         strcpy (n->word, word);
 
-        // obtain hass value
+        // obtain hash value
         hash_value = hash(word);
 
         // insert node into hash value
