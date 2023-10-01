@@ -68,7 +68,7 @@ bool load(const char *dictionary)
 {
     // TODO
     // open dictionary file
-    FILE *file = fopen("dictionary", "r");
+    FILE *file = fopen(dictionary, "r");
 
     // return NULL if file cannot be opened
     if (file == NULL)
