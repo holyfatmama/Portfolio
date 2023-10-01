@@ -34,7 +34,6 @@ bool check(const char *word)
     // TODO
     hash_value = hash(word);
     node *cursor = table[hash_value];
-
     while (cursor != NULL)
     {
         if (strcasecmp(word, cursor->word) == 0)
@@ -118,10 +117,14 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    
+
     for (int i = 0; i < N; i++)
     {
-
+        node *cursor = table[i];
+        node *tmp = cursor;
+        cursor = cursor->next;
+        free(tmp);
+        tmp = cursor;
     }
     return false;
 }
