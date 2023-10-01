@@ -105,7 +105,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    if (word_count > 0
+    if (word_count > 0)
     {
         return(word_count);
     }
@@ -132,11 +132,10 @@ bool unload(void)
             // free memory
             free(tmp);
         }
-        else
+        if (cursor == NULL)
         {
-            if (cursor == NULL)
+            return true;
         }
-        return true;
     }
     return false;
 }
