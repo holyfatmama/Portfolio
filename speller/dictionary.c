@@ -99,8 +99,8 @@ bool load(const char *dictionary)
         hash_value = hash(word);
 
         // insert node into hash value
-        n->next = table[hash_value];
-        table[hash_value] = n;
+        (n*).next = table[hash_value];
+        table[hash_value] = &n;
         word_count++;
     }
     fclose(file);
