@@ -49,9 +49,11 @@ bool load(const char *dictionary)
         return;
     }
     // read strings from file, return null if theres nothing
-
-
-
+    fscanf(file, "%s", word);
+    if (word == NULL)
+    {
+        return;
+    }
     // create new node for each word using malloc
 
     // hash word to obtain a hash value
