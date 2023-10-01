@@ -33,10 +33,6 @@ bool check(const char *word)
     // TODO
     hash_value = hash(word);
     node *cursor = table[hash_value];
-    while (strcasecmp(hash_value, table[hash_value]->word) == false)
-    {
-        cursor = cursor -> next;
-    }
 
     return false;
 }
