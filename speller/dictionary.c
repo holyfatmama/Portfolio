@@ -95,6 +95,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    printf("Total number of words is %s\n", word_count);
     return 0;
 }
 
