@@ -32,7 +32,6 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    //, use some sort of for loop, A is a char (ascii)
     return toupper(word[0]) - 'A';
 }
 
@@ -51,17 +50,25 @@ bool load(const char *dictionary)
     // read strings from file, return null if theres nothing
     char *word[LENGTH + 1];
 
+    // allocate memory and copy word into pointer while scanning the entire file for words
     while(fscanf(file, "%s", word) != EOF)
     {
+        // allocate memory
         node n* = malloc(sizeof(node))
-        n = word;
-        
+
+        // return false if no memory is allocated
+        if (n == NUll)
+        {
+            return false;
+        }
+
+        //copy word into pointer n.word
+        strcpy (n->word, word);
+
+        // obtain hass value
+        hash_value = hash(word);
     }
 
-    // create new node for each word using malloc
-    node n* = malloc(sizeof(node));
-
-    // hash word to obtain a hash value
 
     // insert node into hash table at that location
     return false;
