@@ -93,13 +93,13 @@ bool load(const char *dictionary)
         }
 
         //copy word into pointer n.word
-        strcpy (n->word, word);
+        strcpy (n.word, word);
 
         // obtain hash value
         hash_value = hash(word);
 
         // insert node into hash value
-        (n*).next = table[hash_value];
+        n.next = table[hash_value];
         table[hash_value] = &n;
         word_count++;
     }
