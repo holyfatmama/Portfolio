@@ -56,7 +56,10 @@ bool load(const char *dictionary)
     counter++;
 
     for (int i = 0; i < counter; i++)
-    fscanf(file, %s, ")
+    {
+        fscanf(file, %s, ")
+    }
+
     // create new node for each word
     // hash word to obtain a hash value
     // insert node into hash table at that location
