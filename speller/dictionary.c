@@ -117,14 +117,26 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-
+    // iterate through the linked list
     for (int i = 0; i < N; i++)
     {
+        // set cursor to start of table
         node *cursor = table[i];
-        node *tmp = cursor;
-        cursor = cursor->next;
-        free(tmp);
-        tmp = cursor;
+
+        while (cursor != NULL)
+        {
+            // create temporary cursor set to the cursor position
+            node *tmp = cursor;
+            // move cursor to next position
+            cursor = cursor->next;
+            // free memory
+            free(tmp);
+        }
+        else
+        {
+            if (cursor == NULL)
+        }
+        return true;
     }
     return false;
 }
