@@ -32,9 +32,14 @@ unsigned int hash_value;
 bool check(const char *word)
 {
     // TODO
+    // hash the word to obtain a hash value
     hash_value = hash(word);
+
+    // point cursor to first node
     node *cursor = table[hash_value];
-    while (cursor != NULL)
+
+    // go through the linked list
+    while (cursor != 0)
     {
         if (strcasecmp(word, cursor->word) == 0)
         {
