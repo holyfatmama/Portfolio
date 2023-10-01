@@ -43,32 +43,14 @@ bool load(const char *dictionary)
     // TODO
     // open dictionary file
     FILE *file = fopen("dictionary", "r");
-
     if (*file == NULL)
     {
         printf("File is empty\n");
         return;
     }
-
     // read strings from file, return null if
-    int counter = 1;
 
-    for (int i = 0, int counter = 1; i < counter; i++)
-    {
-        fscanf(file, %s, n);
-        int n = 0;
-        node *n = malloc(sizeof(node));
-        if (n == NULL)
-        {
-            return
-        }
-        else
-        {
-            strcpy()
-        }
-        n++;
-        counter++
-    }
+
 
     // create new node for each word
 
