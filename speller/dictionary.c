@@ -2,9 +2,9 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <strings.h>
 
 #include "dictionary.h"
@@ -45,7 +45,8 @@ bool check(const char *word)
         {
             return true;
         }
-        else cursor = cursor->next;
+        else
+            cursor = cursor->next;
     }
     return false;
 }
@@ -92,8 +93,8 @@ bool load(const char *dictionary)
             return false;
         }
 
-        //copy word into pointer n.word
-        strcpy (n->word, word);
+        // copy word into pointer n.word
+        strcpy(n->word, word);
 
         // obtain hash value
         hash_value = hash(word);
@@ -114,7 +115,7 @@ unsigned int size(void)
     // TODO
     if (word_count > 0)
     {
-        return(word_count);
+        return (word_count);
     }
     return 0;
 }
