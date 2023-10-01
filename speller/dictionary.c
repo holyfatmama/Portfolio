@@ -32,9 +32,11 @@ bool check(const char *word)
 {
     // TODO
     char *word2 = hash(word);
-    if (strcasecmp(word2, table[word2]->word) == false)
+    node *cursor = malloc(sizeof(node));
+    cursor = table[word2]
+    while (strcasecmp(word2, table[word2]->word) == false)
     {
-        
+        cursor = cursor -> next;
     }
 
     return false;
