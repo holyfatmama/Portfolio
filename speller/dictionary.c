@@ -31,8 +31,12 @@ unsigned int hash_value;
 bool check(const char *word)
 {
     // TODO
-    hash(word);
-    
+    char *word2 = hash(word);
+    if (strcasecmp(word2, table[word2]->word) == false)
+    {
+        
+    }
+
     return false;
 }
 
