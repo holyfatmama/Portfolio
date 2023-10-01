@@ -48,11 +48,11 @@ bool load(const char *dictionary)
         printf("File is empty\n");
         return;
     }
-    // read strings from file, return null if
+    // read strings from file, return null if theres nothing
 
 
 
-    // create new node for each word
+    // create new node for each word using malloc
 
     // hash word to obtain a hash value
 
