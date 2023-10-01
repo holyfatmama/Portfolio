@@ -42,8 +42,14 @@ bool load(const char *dictionary)
 {
     // TODO
     // open dictionary file
-    fopen()
+    FILE *fp = fopen("large", "r");
+
+    if (*fp == NULL)
+    {
+        printf("File is empty\n");
+    }
     // read strings from file
+    
     // create new node for each word
     // hash word to obtain a hash value
     // insert node into hash table at that location
