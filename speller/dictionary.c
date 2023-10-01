@@ -70,7 +70,8 @@ bool load(const char *dictionary)
         hash_value = hash(word);
 
         // insert node into hash value
-        table[hash_value]
+        n->next = table[hash_value]
+        
     }
 
 
