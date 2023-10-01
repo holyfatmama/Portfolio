@@ -52,8 +52,7 @@ bool load(const char *dictionary)
     int n = 0;
     node *n = malloc(sizeof(node));
 
-    int counter = 0;
-    counter++;
+    int counter = 1;
 
     for (int i = 0; i < counter; i++)
     {
