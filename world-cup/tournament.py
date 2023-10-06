@@ -19,7 +19,8 @@ def main():
     filename = sys.argv[1]
     with open(filename) as f:
        for team in csv.DictReader(f):
-           team
+           team["rating"] = int(team["rating"])
+           teams.append[team]
 
 
     counts = {}
