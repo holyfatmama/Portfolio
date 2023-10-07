@@ -14,8 +14,9 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
-    teams = []
     # TODO: Read teams into memory from file
+    teams = []
+
     filename = sys.argv[1]
     with open(filename) as f:
        reader = csv.DictReader(f)
@@ -64,7 +65,7 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
-    for teams > 1:
+    for len(teams) > 1:
         teams = simulate_round(teams)
     return teams[0]["team"]
 
