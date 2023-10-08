@@ -1,5 +1,5 @@
 # TODO
 
-height = input
+height = input()
 
 for i in range(height)
