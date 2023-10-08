@@ -11,6 +11,6 @@ while True:
 
 int(height) == 0
 while height < n:
-      for i in range(1, height+1, 1):
+      for i in range(1, height+1):
             print("#")
             height += 1
