@@ -1,6 +1,6 @@
 # TODO
 
-height = input("Whats the height")
+height = int(input("Whats the height"))
 while height > 8:
     height = input("Whats the height")
     width = int(height) - 1
