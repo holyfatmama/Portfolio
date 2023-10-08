@@ -10,28 +10,28 @@ while True:
         break
 
 # quarters
-quarters = 0
+float(quarters) == 0
 
 while (dollars >= 0.25):
         dollars = dollars - 0.25
         quarters += 1
 
 # dime
-dime = 0
+float(dime) == 0
 while (dollars >= 0.10):
      dollars = dollars - 0.10
      dime += 1
 
 
 # nickel
-nickel = 0
+float(nickel) == 0
 
 while (dollars >= 0.05):
      dollars = dollars - 0.05
      nickel += 1
 
 # pennies
-pennies = 0
+float(pennies) == 0
 
 while (dollars >= 0.01):
      dollars = dollars - 0.01
