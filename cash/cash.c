@@ -89,7 +89,7 @@ int calculate_pennies(int cents)
     int pennies = 0;
     if (cents >= pennies)
     {
-        cents--;
+        cents = cents - 1;
         pennies++;
     }
     return 0;
