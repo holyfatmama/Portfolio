@@ -1,4 +1,4 @@
 # TODO
 
-name = input("Wha's your name?")
-prinf(f"hello, {name}")
+name = input("What's your name?")
+print(f"hello, {name}")
