@@ -1,7 +1,7 @@
 # TODO
 
 height = input("Whats the height")
-while height >8 || <1:
+while height >8 or <1:
     height = input("Whats the height")
     width = int(height) - 1
 
