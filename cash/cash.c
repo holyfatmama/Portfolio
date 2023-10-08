@@ -92,5 +92,5 @@ int calculate_pennies(int cents)
         cents = cents - 1;
         pennies++;
     }
-    return 0;
+    return pennies;
 }
