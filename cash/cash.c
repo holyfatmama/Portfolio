@@ -53,8 +53,8 @@ int calculate_quarters(int cents)
     int quarters = 0;
     while (cents >= 25)
     {
-        quarters++;
         cents = cents - 25;
+        quarters++;
     }
     return quarters;
 }
@@ -87,7 +87,7 @@ int calculate_pennies(int cents)
 {
     // TODO
     int pennies = 0;
-    while (cents >= pennies)
+    while (cents >= 1)
     {
         cents = cents - 1;
         pennies++;
