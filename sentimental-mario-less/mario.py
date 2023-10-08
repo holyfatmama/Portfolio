@@ -8,3 +8,8 @@ while True:
             break
 
 #print height
+
+int(height) = 0
+while height < n:
+      for i in range(1, height+1, 1):
+            print("#")
