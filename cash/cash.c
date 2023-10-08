@@ -38,13 +38,20 @@ int main(void)
 int get_cents(void)
 {
     // TODO
-    
+    int cents;
+    do
+    {
+        cents = get_int("how many cents?\n");
+    }
+    while cents < 0
     return 0;
 }
 
 int calculate_quarters(int cents)
 {
     // TODO
+    int quarters;
+    quarters = 25
     return 0;
 }
 
