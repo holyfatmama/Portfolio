@@ -43,28 +43,28 @@ int get_cents(void)
     {
         cents = get_int("how many cents?\n");
     }
-    while cents < 0
+    while (cents < 0);
     return 0;
 }
 
 int calculate_quarters(int cents)
 {
     // TODO
-    int cents / 25;
+    cents / 25;
     return 0;
 }
 
 int calculate_dimes(int cents)
 {
     // TODO
-    int cents / 10
+    cents / 10;
     return 0;
 }
 
 int calculate_nickels(int cents)
 {
     // TODO
-    
+    cents / 5;
     return 0;
 }
 
