@@ -9,32 +9,33 @@ while True:
     if dollars > 0:
         break
 
+cents = round(dollars * 100)
 # quarters
-float(quarters) == 0
+quarters = 0
 
-while (dollars >= 0.25):
-        dollars = dollars - 0.25
+while (cents >= 25):
+        cents = cents - 25
         quarters += 1
 
 # dime
-float(dime) == 0
-while (dollars >= 0.10):
-     dollars = dollars - 0.10
+dime = 0
+while (cents >= 10):
+     cents = cents - 10
      dime += 1
 
 
 # nickel
-float(nickel) == 0
+nickel = 0
 
-while (dollars >= 0.05):
-     dollars = dollars - 0.05
+while (cents >= 5):
+     cents = cents - 5
      nickel += 1
 
 # pennies
-float(pennies) == 0
+pennies = 0
 
-while (dollars >= 0.01):
-     dollars = dollars - 0.01
+while (cents >= 1):
+     cents = cents - 1
      pennies += 1
 
 coins = quarters + dime + nickel + pennies
