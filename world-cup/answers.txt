@@ -16,4 +16,4 @@ Which predictions, if any, proved incorrect as you increased the number of simul
 Suppose you're charged a fee for each second of compute time your program uses.
 After how many simulations would you call the predictions "good enough"?:
 
-I would say after 1,000,000 simulations as the law of large number comes into
+I would say after 1,000,000 simulations as the law of large number becomes more prominent and into play and the time taken for the simulations substentialy increased, which can maybe imply
