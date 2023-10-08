@@ -2,7 +2,7 @@
 import cs50
 
 height = get_int("height of tower")
-while height <1 or >8:
+while height < 1 or > 8:
       height = get_int("height of tower")
 
 width = height - 1
