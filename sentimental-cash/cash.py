@@ -9,6 +9,7 @@ while True:
         break
 
 cents = round(dollars * 100)
+
 # quarters
 quarters = 0
 while cents >= 25:
