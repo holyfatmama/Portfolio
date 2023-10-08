@@ -1,21 +1,44 @@
 # TODO
 from cs50 import get_float
-from cs50 import get_int
 
 #get amount of cents from user
 
 while True:
-    cents = get_int("how many dollars")
-    if cents > 0:
+    dollars = get_float("how many dollars\n")
+    if dollars > 0:
         break
 
 # quarters
 quarters = 0
-while True:
-    while (cents >= 25):
-        cents = cents - 25
-        quarters += 1
-        break
 
-print(quarters)
+while (dollars >= 0.25):
+        dollars = dollars - 0.25
+        quarters += 1
+
+# dime
+dime = 0
+while (dollars >= 0.10):
+     dollars = dollars - 0.10
+     dime += 1
+
+
+# nickel
+nickel = 0
+
+while (dollars >= 0.05):
+     dollars = dollars - 0.05
+     nickel += 1
+
+# pennies
+pennies = 0
+
+while (dollars >= 0.01):
+     dollars = dollars - 0.01
+     pennies += 1
+
+coins = quarters + dime + nickel + pennies
+
+
+print(coins)
+
 
