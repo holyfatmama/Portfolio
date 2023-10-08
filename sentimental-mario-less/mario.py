@@ -1,9 +1,10 @@
 # TODO
 
-
 height = input("Whats the height")
-width = int(height)
+while height >8 || <1:
+    height = input("Whats the height")
+    width = int(height) - 1
 
 for i in range(height):
-    for j in range(width)
+    for j in range(width):
     print("#")
