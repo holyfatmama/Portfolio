@@ -1,5 +1,5 @@
 # TODO
-import cs50
+from cs50 import get_int
 
 height = get_int("height of tower")
 while height < 1 or height > 8:
