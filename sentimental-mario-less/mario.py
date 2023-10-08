@@ -7,8 +7,8 @@ while True:
       if height > 0 & height < 9:
             break
 
-#print height 
+#print height
 h = 0
 while h < height:
-      print("#")
-      h += 1
+        print("#")
+        h += 1
