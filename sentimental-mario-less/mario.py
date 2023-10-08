@@ -10,3 +10,4 @@ width = height - 1
 for i in range(height):
     for j in range(width):
             print("#")
+            
