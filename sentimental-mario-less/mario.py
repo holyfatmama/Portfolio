@@ -1,4 +1,5 @@
 # TODO
+import cs50
 
 height = int(input("Whats the height"))
 while height > 8:
