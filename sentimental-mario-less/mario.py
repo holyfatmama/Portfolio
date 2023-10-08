@@ -8,5 +8,5 @@ while True:
             break
 
 #print height
-for i in range(0, height):
+for i in range(1, height + 1):
       print(" " * (height - i) + "#" * i)
