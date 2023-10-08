@@ -8,9 +8,5 @@ while True:
             break
 
 #print height
-
-int(height) == 0
-while height < n:
-      for i in range(1, height+1):
-            print("#")
-            height += 1
+for i in range(1, n + 1):
+      print("" * )
