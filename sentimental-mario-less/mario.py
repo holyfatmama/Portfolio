@@ -1,13 +1,11 @@
 # TODO
 from cs50 import get_int
 
-height = get_int("height of tower?")
 
-while true:
+while True:
       height = get_int("height of tower?")
-      if height > 8 or < 1:
+      if height > 0 & height < 9:
             break
-      return height
 
 width = height - 1
 
