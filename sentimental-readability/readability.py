@@ -26,8 +26,8 @@ for i in range(len(input)):
 
 print(f"Sentences: {sentences}")
 
-L = float(letters) / (float(words) * 100)
-S = float(sentences) / (float(words) * 100)
+L = letters / words * 100
+S = sentences / words * 100
 
 index = round(0.0588 * L - 0.296 * S - 15.8)
 
