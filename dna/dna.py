@@ -41,7 +41,7 @@ def main():
             if int(person[subsequence]) == results[subsequence]:
                 match =+ 1
         if match == len(subsequences):
-            print(f"person is: {person["name"]}")
+            print(f"person is: person["name"]")
             return
         else:
             print("no match")
