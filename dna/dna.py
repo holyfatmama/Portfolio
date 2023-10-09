@@ -10,11 +10,13 @@ def main():
 
     # TODO: Read database file into a variable
     filename = sys.argv[1]
-    f = open(filename)
+    with open(filename) as f:
+        reader = 
+
 
     # TODO: Read DNA sequence file into a variable
     filename2 = sys.argv[2]
-    f2 = open(filename2)
+    with open(filename2) as f2:
 
     # TODO: Find longest match of each STR in DNA sequence
     longest_match(f,f2)
