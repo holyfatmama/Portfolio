@@ -9,10 +9,10 @@ def main():
         sys.exit("Usage: python dna.py data.csv sequence.txt")
 
     # TODO: Read database file into a variable
-    database[]
+    database = []
     with open(sys.argv[1], "r") as f:
         reader = csv.DictReader(f)
-        for row in header:
+        for row in reader:
             database.append(row)
 
     # database file is a list of dictionaries
