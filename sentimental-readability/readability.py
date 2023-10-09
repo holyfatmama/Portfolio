@@ -12,5 +12,8 @@ for i in range(len(input)):
 
 print(letters)
 
-words = str.count(input)
+words = 0
+for i in range(len(input)):
+    if (str.isspace(input[i]))
+
 print(words)
