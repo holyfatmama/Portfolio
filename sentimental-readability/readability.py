@@ -11,3 +11,6 @@ for i in range(len(input)):
         letters - 1
 
 print(letters)
+
+words = str.count(input)
+print(words)
