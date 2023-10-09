@@ -5,15 +5,20 @@ input = get_string("Text: ")
 
 letters = 0
 for i in range(len(input)):
-    if (str.isalpha(input[i-1]) == True):
+    if (str.isalpha(input[i]) == True):
         letters += 1
-    elif (str.isspace(input[i-1]) == True):
+    elif (str.isspace(input[i]) == True):
         letters - 1
 
-print(letters)
+print(f"Letters: {letters}")
 
-words = 0
+words = 1
 for i in range(len(input)):
-    if (str.isspace(input[i]))
+    if (str.isspace(input[i]) == True):
+        words += 1
 
-print(words)
+print(f"Words: {words}")
+
+sentences = 0
+for i in range(len(input)):
+    if 
