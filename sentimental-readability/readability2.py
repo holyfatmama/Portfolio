@@ -9,7 +9,7 @@ for i in input:
         letters += 1
 print(letters)
 
-words = input.count(" ")
+words = input.count(" ") + 1
 print(words)
 
 sentences = input.count("!") + input.count ("?") + input.count (".")
@@ -20,3 +20,8 @@ S = sentences / words * 100
 
 index = round(0.0588 * L - 0.296 * S - 15.8)
 print(index)
+
+if index <1:
+    print("before grade 1")
+elif index >16:
+    print
