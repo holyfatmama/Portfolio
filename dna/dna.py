@@ -28,6 +28,13 @@ def main():
 
     print(subsequence)
 
+    results{}
+    for i in subsequence:
+        resultslongest_match(dna_sequence, subsequence)
+
+
+
+
     # TODO: Check database for matching profiles
 
     return
