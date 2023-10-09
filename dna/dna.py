@@ -40,8 +40,9 @@ def main():
 
         # if all subsequences match
         if match == len(subsequences):
-            print("person is, + {person["name"]}")
+            print(person["name"])
             return
+
     print("no match")
 
 
