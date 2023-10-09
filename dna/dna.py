@@ -19,7 +19,7 @@ def main():
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as file:
-        dna_sequence = file.read
+        dna_sequence = file.read()
 
     # dna_sequence is just a string
 
@@ -40,10 +40,9 @@ def main():
 
         # if all subsequences match
         if match == len(subsequences):
-            print(person is person["name"])
+            print("person is person["name"]")
             return
-        else:
-            print("no match")
+    print("no match")
 
 
     return
