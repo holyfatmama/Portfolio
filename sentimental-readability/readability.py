@@ -38,4 +38,4 @@ elif index > 16:
 else:
     print(f"Grade: {index}")
 
-print(input.count("y"))
+print(input.count("."))
