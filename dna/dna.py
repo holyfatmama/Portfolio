@@ -14,13 +14,14 @@ def main():
         reader = csv.DictReader(f)
         for row in header:
             database.append(row)
-    # of use f.read()
+
+    # database file is a list of dictionaries
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as file:
         dna_sequence = file.read
 
-    # of use f2.read()
+    # dna_sequence is just a string
 
     # TODO: Find longest match of each STR in DNA sequence
     longest_match(reader, reader2)
