@@ -20,7 +20,7 @@ def main():
     longest_match(f,f2)
 
     # TODO: Check database for matching profiles
-    f[]
+    
 
     return
 
