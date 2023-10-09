@@ -7,5 +7,7 @@ letters = 0
 for i in range(len(input)):
     letter = str.isalpha(input[i-1])
     letters += 1
+    space = str.isletter(input[i-1])
+    
 
 print(letters)
