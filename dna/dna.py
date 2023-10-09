@@ -24,13 +24,13 @@ def main():
     # dna_sequence is just a string
 
     # TODO: Find longest match of each STR in DNA sequence
-    subsequence = (list(database[0].keys())[1:])
+    subsequences = (list(database[0].keys())[1:])
 
-    print(subsequence)
+    print(subsequences)
 
-    results{}
-    for i in subsequence:
-        resultslongest_match(dna_sequence, subsequence)
+
+    for subsequence in subsequences:
+        results = longest_match(dna_sequence, subsequence)
 
 
 
