@@ -3,7 +3,7 @@ from cs50 import get_int
 
 # get height of tower from user
 while True:
-      height = get_int("height of tower?")
+      height = get_int("Height: ")
       if height > 0 and height < 9:
             break
 
