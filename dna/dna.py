@@ -37,11 +37,7 @@ def main():
     # TODO: Check database for matching profiles
     for person in database:
         match = 0
-        if database[person].keys()[1:] == results:
-            print(f"person is: {database[person].keys()[1:2]}")
-            match += 1
-        elif person != results:
-            print("none found")
+        
     return
 
 
