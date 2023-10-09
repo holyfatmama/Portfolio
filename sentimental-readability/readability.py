@@ -21,4 +21,8 @@ print(f"Words: {words}")
 
 sentences = 0
 for i in range(len(input)):
-    if 
+    if (input[i] == "." or input [i] == "?" or input[i] == "!"):
+        sentences += 1
+
+print(f"Sentences: {sentences}")
+
