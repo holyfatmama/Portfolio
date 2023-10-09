@@ -28,9 +28,9 @@ def main():
 
     print(subsequences)
 
-
+    results = {}
     for subsequence in subsequences:
-        results = longest_match(dna_sequence, subsequence)
+        results[subsequence] = longest_match(dna_sequence, subsequence)
 
 
 
