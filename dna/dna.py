@@ -40,8 +40,10 @@ def main():
         for subsequence in subsequences:
             if int(person[subsequence]) == results[subsequence]:
                 match =+ 1
+
+        # if all subsequences match
         if match == len(subsequences):
-            print(f"person is: person["name"]")
+            print(person is person["name"])
             return
         else:
             print("no match")
