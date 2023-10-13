@@ -1,2 +1,2 @@
 mostly pop and rap songs
-taking into account other factors of the songs too such as the key, 
+taking into account other factors of the songs too such as the key, loudsness, speechiness and tempo of the songs. Furthermore, the profile of the artist can also be taken into consideration, example: Drake being mainly an artist that create rap songs instead of pop
