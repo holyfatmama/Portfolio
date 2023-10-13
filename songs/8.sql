@@ -1,1 +1,1 @@
-SELECT AVG(energy) FROM songs WHERE artist_id = (SELECT id FROM artists WHERE name = 'Drake');
+SELECT name FROM songs WHERE name LIKE '%feat.%';
