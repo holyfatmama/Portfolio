@@ -1,0 +1,1 @@
+SELECT * FROM people WHERE name = 'Bradley Cooper' OR name = 'Jennifer Lawrence';
