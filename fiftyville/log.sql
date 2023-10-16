@@ -25,3 +25,4 @@ SELECT * FROM atm_transactions WHERE month = '7' AND day = '28' AND atm_location
 
 163 Raymond
 call, less than minute, thief take earliest flight out of fiftyville the day after (29 July), ticket bought
+fiftyville airport id = 8
