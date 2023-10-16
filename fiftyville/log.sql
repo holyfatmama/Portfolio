@@ -17,14 +17,17 @@ id 163, Lily
 Car, parking lot, exit by 1025am, 28 July
 
 161 Ruth
+possible list of suspects for car
 SELECT * FROM bakery_security_logs WHERE month = '7' AND day = '28' AND hour = '10' AND activity = 'exit' AND minute <= '25';
 
 162 Eugene
 ATM, Leggett Street, withdraw
+possible suspects for withdrawal
 SELECT * FROM atm_transactions WHERE month = '7' AND day = '28' AND atm_location = 'Leggett Street' And transaction_type = 'withdraw';
 
 163 Raymond
 call, less than minute, thief take earliest flight out of fiftyville the day after (29 July), ticket bought
+
 fiftyville airport id = 8
 destination = airport id 4 = LaGuardia Airport, New York City, flight id = 36
 
