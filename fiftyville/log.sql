@@ -39,3 +39,6 @@ SELECT * FROM passengers WHERE flight_id = 36;
 
 suspect list from car
 SELECT * FROM people WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = '7' AND day = '28' AND hour = '10' AND activity = 'exit' AND minute <= '25');
+
+suspect list from call
+SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = '7' AND day = '28' AND duration <= '60' ORDER BY duration ASC);
