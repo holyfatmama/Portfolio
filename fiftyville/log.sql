@@ -49,3 +49,4 @@ SELECT * FROM people WHERE passport_number IN (SELECT passport_number FROM passe
 bakery join people
 people JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate;
 
+SELECT * FROM people JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate JOIN phone_calls ON people.phone_number = phone_calls.caller JOIN passengers ON people.passport_number = passengers.passport_number WHERE bakery_security_logs.month ='7' AND bakery_security_logs.day ='28';
