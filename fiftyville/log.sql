@@ -49,6 +49,6 @@ SELECT * FROM people WHERE passport_number IN (SELECT passport_number FROM passe
 bakery join people
 people JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate;
 
-SELECT * FROM people JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate JOIN phone_calls ON people.phone_number = phone_calls.caller JOIN passengers ON people.passport_number = passengers.passport_number WHERE bakery_security_logs.month ='7' AND bakery_security_logs.day ='28' AND bakery_security_logs.hour = '10' AND bakery_security_logs.minute <= '25' AND phone_calls.duration < '60';
+SELECT * FROM people JOIN bank_accounts ON bank_accounts.person_id = people.id JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate JOIN phone_calls ON people.phone_number = phone_calls.caller JOIN passengers ON people.passport_number = passengers.passport_number WHERE bakery_security_logs.month ='7' AND bakery_security_logs.day ='28' AND bakery_security_logs.hour = '10' AND bakery_security_logs.minute <= '25' AND phone_calls.duration < '60' AND people.id IN (SELECT person_id FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE month = '7' AND day = '28' AND atm_location = 'Leggett Street' And transaction_type = 'withdraw')) ;
 
 SELECT * FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE month = '7' AND day = '28' AND atm_location = 'Leggett Street' And transaction_type = 'withdraw');
