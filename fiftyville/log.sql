@@ -36,3 +36,6 @@ destination = airport id 4 = LaGuardia Airport, New York City, flight id = 36
 
 possible suspects for flight
 SELECT * FROM passengers WHERE flight_id = 36;
+
+suspect list from car
+SELECT * FROM people WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = '7' AND day = '28' AND hour = '10' AND activity = 'exit' AND minute <= '25');
