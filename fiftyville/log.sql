@@ -46,4 +46,6 @@ SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE
 suspect list from flight
 SELECT * FROM people WHERE passport_number IN (SELECT passport_number FROM passengers WHERE flight_id = 36);
 
-SELECT * FROM people WHERE phone_number IN (SELECT phone_number FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE month = '7' AND day = '28' AND duration <= '60' ORDER BY duration ASC) AND passport_number IN (SELECT passport_number FROM people WHERE passport_number IN (SELECT passport_number FROM passengers WHERE flight_id = 36)) AND license_plate = (SELECT * FROM people WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE month = '7' AND day = '28' AND hour = '10' AND activity = 'exit' AND minute <= '25');
+bakery join people
+people JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate;
+
