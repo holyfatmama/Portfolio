@@ -7,9 +7,6 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            document.querySelector('#button').addEventListener('click', function(){
-                body.style.backgroundColor = 'red';
-            });
         </script>
     </head>
     <body>
@@ -26,6 +23,12 @@
                 <button type="text"> bangkok </button>
                 <button type="text"> phuket </button>
                 <button type="text"> krabi </button>
+                <script>
+                    let body = document.querySelectorALL('body');
+                    document.querySelector('button').addEventListener('click', function(){
+                        body.style.backgroundColor = 'red';
+                    });
+                </script>
             </div>
 
             <div class="section">
