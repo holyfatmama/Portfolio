@@ -20,13 +20,13 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>What is the capital of Thailand?</h3>
-                <button type="text"> bangkok </button>
-                <button type="text"> phuket </button>
-                <button type="text"> krabi </button>
+                <button type="text" class="correct"> bangkok </button>
+                <button type="text" class="'incorrect"> phuket </button>
+                <button type="text" class="incorrect"> krabi </button>
                 <script>
-                    let body = document.querySelector('body');
-                    document.querySelector('button').addEventListener('click', function(){
-                        body.style.backgroundColor = 'red';
+                    let body = document.querySelector('button');
+                    document.querySelector('#correct').addEventListener('click', function(){
+                        body.style.backgroundColor = 'green';
                     });
                 </script>
             </div>
