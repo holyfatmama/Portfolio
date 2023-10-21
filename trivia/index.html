@@ -24,9 +24,12 @@
                 <button type="text" id="incorrect"> phuket </button>
                 <button type="text" id="incorrect"> krabi </button>
                 <script>
-                    let body = document.querySelector('#correct');
+                    let body = document.querySelector('button');
                     document.querySelector('#correct').addEventListener('click', function(){
                         body.style.backgroundColor = 'green';
+                    });
+                    document.querySelector('#incorrect').addEventListener('click', function(){
+                        body.style.backgroundColor = 'red';
                     });
 
                 </script>
