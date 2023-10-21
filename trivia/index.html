@@ -7,9 +7,9 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            document.querySelector('#incorrect').addEventListener('click', function() {
-                body.style.backgroundColor = 'red';
-            });
+            function turnRed() {
+                document.body.style.backgroundColor = 'red';
+            }
         </script>
     </head>
     <body>
@@ -23,9 +23,9 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>What is the capital of Thailand?</h3>
-                <button id="correct" type="button"> bangkok </button>
-                <button id="incorrect" type="button"> phuket </button>
-                <button id="incorrect" type="button"> krabi </button>
+                <button type="button"> bangkok </button>
+                <button type="button" onclick="turnRed()"> phuket </button>
+                <button type="button"> krabi </button>
             </div>
 
             <div class="section">
