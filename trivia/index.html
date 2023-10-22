@@ -7,6 +7,7 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
+            document.addEventListener()
         </script>
     </head>
     <body>
@@ -23,16 +24,7 @@
                 <button type="text" class="correct"> bangkok </button>
                 <button type="text" class="incorrect"> phuket </button>
                 <button type="text" class="incorrect"> krabi </button>
-                <script>
-                    let body = document.querySelector('button');
-                    document.querySelector('.correct').addEventListener('click', function(){
-                        body.style.backgroundColor = 'green';
-                    });
-                    document.querySelector('.incorrect').addEventListener('click', function(){
-                        body.style.backgroundColor = 'red';
-                    });
-
-                </script>
+                <p id="feedback1"></p>
             </div>
 
             <div class="section">
@@ -42,6 +34,7 @@
                 <h3>What is the national animal of Australia?</h3>
                 <input type="text"></input>
                 <button type="submit"> submit </button>
+                <p id="feedback2"></p>
             </div>
         </div>
     </body>
