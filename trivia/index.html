@@ -7,7 +7,7 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            document.addEventListener('DOMContentLoaded', function(){
+            document.addEventListener('DOMContentLoaded', function() {
 
                 let correct = document.querySelector('.correct');
                 correct.addEventListener('click', function(){
@@ -17,8 +17,8 @@
 
                 let incorrect = document.querySelectorAll('.incorrect');
                 for (let i = 0; i < incorrect.length; i++) {
-                    incorrect.addEventListener('click', function(){
-                        incorrect.style.backgroundColor = 'red';
+                    incorrect[i].addEventListener('click', function() {
+                        incorrect[i].style.backgroundColor = 'red';
                         document.querySelector('#feedback1').innerHTML = 'incorrect!';
                     });
                 }
