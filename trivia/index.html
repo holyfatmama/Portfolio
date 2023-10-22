@@ -17,7 +17,7 @@
 
                 let incorrects = document.querySelectorAll('.incorrect');
                 for (let i = 0; i < incorrects.length; i++) {
-                    incorrect[i].addEventListener('click', function() {
+                    incorrects[i].addEventListener('click', function() {
                         incorrectS[i].style.backgroundColor = 'red';
                         document.querySelector('#feedback1').innerHTML = 'incorrect!';
                     });
