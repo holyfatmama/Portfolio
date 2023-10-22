@@ -12,14 +12,14 @@
                 let correct = document.querySelector('.correct');
                 correct.addEventListener('click', function(){
                     correct.style.backgroundColor = 'green';
-                    document.querySelector('#feedback1').innerHTML = 'correct!';
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
                 });
 
                 let incorrects = document.querySelectorAll('.incorrect');
                 for (let i = 0; i < incorrects.length; i++) {
                     incorrects[i].addEventListener('click', function() {
                         incorrects[i].style.backgroundColor = 'red';
-                        document.querySelector('#feedback1').innerHTML = 'incorrect!';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect!';
                     });
                 }
 
@@ -47,9 +47,10 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>What is the capital of Thailand?</h3>
-                <button type="text" class="correct"> bangkok </button>
-                <button type="text" class="incorrect"> phuket </button>
-                <button type="text" class="incorrect"> krabi </button>
+                <button type="text" class="correct"> Bangkok </button>
+                <button type="text" class="incorrect"> Phuket </button>
+                <button type="text" class="incorrect"> Krabi </button>
+                <button type="text" class="incorrect"> Pattaya City</button>
                 <p id="feedback1"></p>
             </div>
 
