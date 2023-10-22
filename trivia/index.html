@@ -16,11 +16,13 @@
                 });
 
                 let incorrect = document.querySelectorAll('.incorrect');
-                for(let i = 0 < incorrect.length,incorrect.addEventListerner('click', function{
-
-                })
-
-            })
+                for (let i = 0; i < incorrect.length; i++) {
+                    incorrect.addEventListerner('click', function{
+                        incorrect.style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'incorrect!';
+                    });
+            });
+        };
         </script>
     </head>
     <body>
