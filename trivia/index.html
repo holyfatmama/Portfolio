@@ -23,6 +23,16 @@
                     });
                 }
 
+                let check = document.querySelector('.check')
+                if (check == Kangaroo) {
+                    check.style.backgroundColor = 'green';
+                    document.querySelector('#feedback2').innerHTML = 'correct!';
+                }
+                else{
+                    check.style.backgroundColor = 'red';
+                    document.querySelector(#feedback2').innerHTML = 'incorrect!';
+                }
+
 
             });
         </script>
@@ -49,7 +59,7 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>What is the national animal of Australia?</h3>
-                <input type="text" ></input>
+                <input type="text" class="check"></input>
                 <button type="submit"> submit </button>
                 <p id="feedback2"></p>
             </div>
