@@ -25,11 +25,10 @@
 
                 document.querySelector('#check').addEventListener('click', function() {
                     let input = document.querySelector('input');
-                    if (input == Kangaroo) {
+                    if (input.value === 'Kangaroo') {
                         input.style.backgroundColor = 'Green';
                         document.querySelector('#feedback2').innerHTML = 'Correct!';
-                    }
-                    else {
+                    } else {
                         input.style.backgroundColor = 'red';
                         document.querySelector('#feedback2').innerHTML = 'Incorrect!';
                     }
