@@ -23,18 +23,17 @@
                     });
                 }
 
-                document.querySelector(#check)
-                let check = document.querySelector('.check')
-                if (check == Kangaroo) {
-                    check.style.backgroundColor = 'green';
-                    document.querySelector('#feedback2').innerHTML = 'correct!';
-                }
-                else {
-                    check.style.backgroundColor = 'red';
-                    document.querySelector(#feedback2').innerHTML = 'incorrect!';
-                }
-
-
+                let check = document.querySelector('check');
+                check.addEventListener('click', function(){
+                    if (check == Kangaroo) {
+                        check.style.backgroundColor = 'Green';
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                    }
+                    else {
+                        check.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect!';
+                    }
+                })
             });
         </script>
     </head>
