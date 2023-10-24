@@ -12,15 +12,15 @@
             let correct = document.querySelector('.correct');
             correct.addEventListener('click', function(){
                 correct.style.backgroundColor = 'green';
-                document.querySelector('#p1').innerHTML = 'Correct!';
+                document.querySelector('#feedback1').innerHTML = 'Correct!';
                 ultraman.removeAttribute("hidden");
             });
 
             let incorrects = document.querySelector('.incorrect');
             for (let i = 0; i < incorrects.length; i++){
-                incorrects[i].addEventListener('click', function(){
+                incorrects[i].addEventListener('click', function() {
                     incorrects[i].style.backgroundColor = 'red';
-                    document.querySelector('#p1').innerHTML = 'Incorrect!';
+                    document.querySelector('#feedback1').innerHTML = 'Incorrect!';
                 });
             }
         });
@@ -35,7 +35,7 @@
         <button type="text" class="incorrect">10</button>
         <button type="text" class="correct">11</button>
         <!--insert ultraman picture-->
-        <p id="p1"></p>
+        <p id="feedback1"></p>
         <img src="Brothers.JPEG" hidden id="ultraman">
     </body>
 </html>
