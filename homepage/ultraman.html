@@ -12,7 +12,11 @@
             correct.addEventListener('click', function(){
                 correct.style.backgroundColor = 'green';
                 document.querySelector('#p1').innerHTML = 'yes';
+                let ultraman = document.querySelector('#ultraman');
+                ultraman.style.visibility = 'visible';
             })
+
+
         });
 
     </script>
@@ -26,6 +30,6 @@
         <button type="text" class="correct">11</button>
         <!--insert ultraman picture-->
         <p id="p1"></p>
-        <img src="Brothers.JPEG" hidden>
+        <img src="Brothers.JPEG" hidden id="ultraman">
     </body>
 </html>
