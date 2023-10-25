@@ -38,3 +38,12 @@ body {
     padding: 2rem 1rem;
     text-align: center;
 }
+
+#ultraman{
+    text-align: center;
+
+}
+
+table, th, td {
+    border: 1px solid;
+  }
