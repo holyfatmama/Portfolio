@@ -15,3 +15,11 @@ body {
     font-size:200%;
     background-color: #33FFC7;
 }
+
+#left{
+    text-align: left;
+}
+
+#avatar{
+    font-family: "Copperplate";
+}
