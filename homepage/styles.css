@@ -22,6 +22,10 @@ body {
     background-color: #8D33FF;
 }
 
+#white{
+    color = white;
+}
+
 .meme {
     font-family: "Brush Script MT", cursive;
 }
