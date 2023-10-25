@@ -39,9 +39,10 @@ body {
     text-align: center;
 }
 
-#ultraman{
+#ultramen{
     text-align: center;
-
+    padding: 2rem 1rem;
+    background-color: #FFE933;
 }
 
 table, th, td {
