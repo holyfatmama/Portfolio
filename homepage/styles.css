@@ -18,6 +18,8 @@ body {
 
 #left{
     text-align: left;
+    font-size:200%;
+    background-color: #8D33FF;
 }
 
 .meme {
