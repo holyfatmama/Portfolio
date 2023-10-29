@@ -114,7 +114,7 @@ def register():
         password = request.form.get("password")
         return redirect("/")
     else:
-        return apology("TODO")
+        return render_template("register.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
