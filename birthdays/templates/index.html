@@ -33,13 +33,13 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
-                        <ul>
                             {% for birthday in birthdays%}
-                                <li>{{ birthday.name }}</li>
-                                <li>{{ birthday.month }}</li>
-                                <li>{{ birthday.day }}</li>
+                            <tr>
+                                <td>{{ birthday.name }}</td>
+                                <td>{{ birthday.month }}</td>
+                                <td>{{ birthday.day }}</td>
+                            </tr>
                             {% endfor %}
-                        </ul>
                     </tbody>
                 </table>
             </div>
