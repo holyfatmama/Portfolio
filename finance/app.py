@@ -109,7 +109,7 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    if request.method == "POST":
+    if request.method == "get":
         username = request.form.get("username")
         password = request.form.get("password")
         return redirect("/")
