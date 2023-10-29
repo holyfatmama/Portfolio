@@ -35,7 +35,9 @@
                         <!-- TODO: Loop through the database entries to display them in this table -->
                         <ul>
                             {% for birthday in birthdays%}
-                                <li>{{</li>
+                                <li>{{ birthday.name }}</li>
+                                <li>{{ birthday.month }}</li>
+                                <li>{{ birthday.day }}</li>
                         </ul>
                     </tbody>
                 </table>
