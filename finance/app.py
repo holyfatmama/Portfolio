@@ -50,12 +50,14 @@ def buy():
         if not request.form.get("shares"):
             return apology("Please enter a correct amount")
 
-        stock = lookup(request.form.get("symbol"))
-        if stock.symbol != request.form.get("symbol"):
-            return apology("Please enter a correct symbol")
+        quote = lookup(request.form.get("symbol"))
+        if not quote:
+            return apology("symbol not found")
 
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
+
+        quote = lookup(symbol)
 
         return render_template("/")
     else:
