@@ -3,5 +3,6 @@
 int main (void)
 {
     char * s = "HI!";
-    printf("%p,)
+    printf("%p\n", s);
+    printf("%p\n", s[0]);
 }
