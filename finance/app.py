@@ -56,7 +56,11 @@ def buy():
 
         quote = lookup(request.form.get("symbol"))
 
-        quote["symbol"]
+        symbol = quote["symbol"]
+        price = quote["price"]
+
+
+
 
         return render_template("/")
 
