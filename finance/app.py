@@ -112,6 +112,13 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
+        """check if database has username"""
+        rows = db.execute()
+        for row in rows:
+            if row.username == username:
+                return apology
+            else
+                db.execute()
         return redirect("/")
     else:
         return render_template("register.html")
