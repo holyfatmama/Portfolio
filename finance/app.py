@@ -129,6 +129,7 @@ def register():
             return apology ("please enter different username")
 
         return redirect("/")
+    
     else:
         return render_template("register.html")
 
