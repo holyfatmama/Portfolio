@@ -111,7 +111,7 @@ def register():
     """Register user"""
     if request.method == "POST":
         username = request.form.get("username")
-        password = generate_password_hash(request.form.get("password")
+        password = generate_password_hash(request.form.get("password"))
 
         """check if username is empty"""
         if not username:
@@ -124,7 +124,8 @@ def register():
         """check if database has username"""
         users = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
         if len(users) != 1:
-            db.execute("INSERT INTO finance (username, hash))
+            db.execute
+            db.execute("INSERT INTO finance (username, hash) VALUES (?, ?)", username, password)
     else:
         return render_template("register.html")
 
