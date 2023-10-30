@@ -122,8 +122,8 @@ def register():
             return apology("please enter password")
 
         """check if database has username"""
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
-        if len(rows) != 1:
+        users = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        if len(users) != 1:
             db.execute("INSERT INTO finance (username, hash))
     else:
         return render_template("register.html")
