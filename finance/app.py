@@ -54,7 +54,9 @@ def buy():
         if stock.symbol != request.form.get("symbol"):
             return apology("Please enter a correct symbol")
 
-    return apology("TODO")
+
+    else:
+        return render_template("buy.html")
 
 
 @app.route("/history")
