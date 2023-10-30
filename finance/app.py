@@ -112,12 +112,21 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
+
+        """check if username is empty"""
+        if not username:
+            return apology("please enter username")
+
+        """check if password is empty"""
+        if not password:
+            return apology("please enter password")
+        
         """check if database has username"""
         rows = db.execute()
         for row in rows:
             if row.username == username:
                 return apology("Use a different username")
-            else
+            else:
                 db.execute()
         return redirect("/")
     else:
