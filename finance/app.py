@@ -106,9 +106,13 @@ def quote():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         quote = lookup(symbol)
-        name = quote.name
-        price = quote.price
-        symbol = quote.symbol
+        if not quote:
+            name = quote.name
+            price = quote.price
+            symbol = quote.symbol
+        else:
+            return apology("Please enter correct symbol")
+
 
     return render_template("quote.html", price=price)
 
