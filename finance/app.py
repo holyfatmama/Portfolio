@@ -111,7 +111,7 @@ def register():
     """Register user"""
     if request.method == "POST":
         username = request.form.get("username")
-        password = request.form.get("password")
+        password = generate_password_hash(request.form.get("password")
 
         """check if username is empty"""
         if not username:
