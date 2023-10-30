@@ -54,7 +54,9 @@ def buy():
         if stock.symbol != request.form.get("symbol"):
             return apology("Please enter a correct symbol")
 
-
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+        
     else:
         return render_template("buy.html")
 
