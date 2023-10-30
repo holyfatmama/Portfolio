@@ -54,12 +54,12 @@ def buy():
         if not quote:
             return apology("symbol not found")
 
-        symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
+        quote = lookup(request.form.get("symbol"))
 
-        quote = lookup(symbol)
+        quote["symbol"]
 
         return render_template("/")
+
     else:
         return render_template("buy.html")
 
