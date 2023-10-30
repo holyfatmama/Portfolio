@@ -120,15 +120,11 @@ def register():
         """check if password is empty"""
         if not password:
             return apology("please enter password")
-        
+
         """check if database has username"""
-        rows = db.execute()
-        for row in rows:
-            if row.username == username:
-                return apology("Use a different username")
-            else:
-                db.execute()
-        return redirect("/")
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        if len(rows) != 1:
+            db.execute("INSERT INTO finance)
     else:
         return render_template("register.html")
 
