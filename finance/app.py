@@ -115,24 +115,31 @@ def register():
         hash = generate_password_hash(request.form.get("password"))
         confirmation = request.form.get("confirmation")
 
-        """check if username is empty"""
+        # check if username is empty
         if not username:
             return apology("please enter username")
 
-        """check if password is empty"""
+        # check if password is empty
         if not password:
             return apology("please enter password")
 
-        """check if confirmation is same as password"""
+        # check if confirmation is same as password
         if confirmation != password:
             return apology("please enter same password as confirmation")
 
-        """check if database has username"""
+        # check if database has username
         users = db.execute("SELECT * FROM users WHERE username = ?", username)
-        if len(users) != 1:
-            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password)
-        else:
+        if len(users) != 0:
             return apology ("please enter different username")
+
+        # insert username and hash into database
+        db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hash)
+
+        # query database for username
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+
+        # remember session
+        session["user_id"] = rows[0]["id"]
 
         return redirect("/")
 
