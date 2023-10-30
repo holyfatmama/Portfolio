@@ -112,8 +112,8 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-        hash = generate_password_hash(request.form.get("password"))
         confirmation = request.form.get("confirmation")
+        hash = generate_password_hash(request.form.get("password"))
 
         # check if username is empty
         if not username:
@@ -122,6 +122,10 @@ def register():
         # check if password is empty
         if not password:
             return apology("please enter password")
+
+        # check if confirmation is empty
+        if not confirmation:
+            return apology("please enter confirmation")
 
         # check if confirmation is same as password
         if confirmation != password:
@@ -140,7 +144,6 @@ def register():
 
         # remember session
         session["user_id"] = rows[0]["id"]
-
         return redirect("/")
 
     else:
