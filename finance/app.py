@@ -116,7 +116,7 @@ def register():
         rows = db.execute()
         for row in rows:
             if row.username == username:
-                return apology
+                return apology("Use a different username")
             else
                 db.execute()
         return redirect("/")
