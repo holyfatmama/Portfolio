@@ -122,9 +122,11 @@ def register():
             return apology("please enter password")
 
         """check if database has username"""
-        users = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        users = db.execute("SELECT * FROM users WHERE username = ?", username)
         if len(users) != 1:
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password)
+        else:
+            return apology ("please enter different username")
 
         return redirect("/")
     else:
