@@ -114,7 +114,7 @@ def quote():
             return apology("Please enter correct symbol")
 
 
-    return render_template("quote.html", price=price)
+    return render_template("quote.html", price=price, name=name)
 
 
 @app.route("/register", methods=["GET", "POST"])
