@@ -36,6 +36,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     # look thru each line of transaction by user, group the total/sum of symbol and present data
+    
     return apology("ily")
 
 
