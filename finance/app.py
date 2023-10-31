@@ -57,7 +57,6 @@ def buy():
         if not quote:
             return apology("symbol not found")
 
-        quote = lookup(request.form.get("symbol"))
 
         symbol = quote["symbol"]
         price = quote["price"]
