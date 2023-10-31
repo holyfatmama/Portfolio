@@ -45,10 +45,12 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
 
-        if not request.form.get("symbol"):
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+        if not symbol:
             return apology("Please input a symbol")
 
-        if not request.form.get("shares"):
+        if not shares:
             return apology("Please enter a correct amount")
 
         quote = lookup(request.form.get("symbol"))
