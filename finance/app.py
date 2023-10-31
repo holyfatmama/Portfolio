@@ -42,6 +42,7 @@ def index():
 
     total_value = cash
     grand_total = cash
+    total_shares = 0
 
 
     for stock in stocks:
@@ -49,7 +50,9 @@ def index():
         stock["name"] = stock["name"]
         stock["price"] = quote["price"]
         stock["symbol"] = quote["symbol"]
-        grand_total += stock["price"] * 
+        total_shares += 1
+        grand_total += stock["price"] * total_shares
+        total_value +=
 
 
     return apology("ily")
