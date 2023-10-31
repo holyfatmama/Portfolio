@@ -35,8 +35,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    # look thru each line of transaction by user, group the total/sum of symbol and present data
-    
+    # get us
+    stocks = db.exectute
     return apology("ily")
 
 
