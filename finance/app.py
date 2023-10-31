@@ -82,7 +82,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    # look through each line of transaction where ? equals to username
+    # look through each line of transaction where ? equals to username and display it
     return apology("TODO")
 
 
