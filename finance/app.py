@@ -58,13 +58,12 @@ def buy():
         price = quote["price"]
         total_cost = int(shares) * price
         # select cash amount from database
-        cash = db.execute("SELECT * FROM users WHERE id = ?", request.form.get("username"))[0][cash]
+        cash = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
         # check if there is enough cash, if it is, update cash amount, if not return apology
         if cash < total_cost:
             return apology("not enough cash")
 
-        rows = db.execute("SELECT * FORM users WHERE id = ?", session["user_id"])
 
         session["user_id"] = rows[0]["id"]
 
