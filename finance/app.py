@@ -59,7 +59,7 @@ def buy():
 
         price = quote["price"]
         shares = request.form.get("shares")
-        
+
         # select cash amount from database
         cash = db.execute("SELECT cash FROM users WHERE id = ?", request.form.get("username"))
 
@@ -72,7 +72,7 @@ def buy():
 
         session["user_id"] = rows[0]["id"]
 
-        db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, session["user_id"])
+        db.execute("UPDATE users SET cash = (cash - ?) WHERE id = ?", total_cost, session["user_id"])
 
 
         return render_template("/")
