@@ -43,6 +43,7 @@ def index():
     symbol = stocks[]
 
     for stock in stocks:
+        quote = lookup(stock[symbol])
 
 
     return apology("ily")
