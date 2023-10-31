@@ -194,7 +194,7 @@ def register():
 
         # remember session
         session["user_id"] = rows[0]["id"]
-        
+         
         return redirect("/")
 
     else:
