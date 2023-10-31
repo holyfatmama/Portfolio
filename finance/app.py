@@ -64,10 +64,10 @@ def buy():
         if cash < total_cost:
             return apology("not enough cash")
 
-
-        session["user_id"] = rows[0]["id"]
-
         db.execute("UPDATE users SET cash = (cash - ?) WHERE id = ?", total_cost, session["user_id"])
+
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price)" session[user_id], symbol, shares, price)
+
         return redirect("/")
 
     else:
