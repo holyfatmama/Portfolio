@@ -35,6 +35,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    
     return apology("ily")
 
 
@@ -68,10 +69,6 @@ def buy():
             return apology("not enough cash")
 
         db.execute("UPDATE TABLE users )
-
-
-
-
 
 
 
