@@ -35,7 +35,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    
+    # look thru each line of transaction by user, group the total/sum of symbol and present data
     return apology("ily")
 
 
@@ -82,6 +82,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+    # look through each line of transaction where ? equals to username
     return apology("TODO")
 
 
@@ -196,4 +197,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    # lookup symbol to sell
+
+    # update database by removing previously bought transaction and updating cash balance with the CURRENT price 
     return apology("TODO")
