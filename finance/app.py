@@ -42,7 +42,8 @@ def index():
 
     symbol = stocks[]
 
-    
+    for stock in stocks:
+
 
     return apology("ily")
 
