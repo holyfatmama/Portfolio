@@ -57,11 +57,9 @@ def buy():
         if not quote:
             return apology("symbol not found")
 
-
-        symbol = quote["symbol"]
         price = quote["price"]
         shares = request.form.get("shares")
-
+        
         # select cash amount from database
         cash = db.execute("SELECT cash FROM users WHERE id = ?", request.form.get("username"))
 
