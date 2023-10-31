@@ -59,7 +59,9 @@ def buy():
         symbol = quote["symbol"]
         price = quote["price"]
 
-        cash = db.execute
+        cash = db.execute("SELECT CASH FROM users WHERE id = ?", username)
+
+        
 
 
 
