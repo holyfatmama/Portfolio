@@ -49,10 +49,10 @@ def index():
         quote = lookup(stock["symbol"])
         stock["name"] = stock["name"]
         stock["price"] = quote["price"]
-        stock["symbol"] = quote["symbol"]
+        stock["value"] 
         total_shares += 1
         total_value += stock["price"] * total_shares
-        grand_total += 
+        grand_total +=
 
 
     return apology("ily")
