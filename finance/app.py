@@ -58,10 +58,12 @@ def buy():
 
         symbol = quote["symbol"]
         price = quote["price"]
+        shares = request.form.get("shares")
 
-        cash = db.execute("SELECT CASH FROM users WHERE id = ?", request.form.get("username"))
-
-        if 
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", request.form.get("username"))
+        
+        if cash >= (shares * price):
+            db.execute("UPDATE TABLE users )
 
 
 
