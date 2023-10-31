@@ -144,10 +144,8 @@ def quote():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         quote = lookup(symbol)
-
         if not quote:
             return apology("Please enter correct symbol")
-
         return render_template("quote.html", quote=quote)
     else:
         return render_template("quote.html")
@@ -194,7 +192,7 @@ def register():
 
         # remember session
         session["user_id"] = rows[0]["id"]
-         
+
         return redirect("/")
 
     else:
