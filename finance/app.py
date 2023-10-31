@@ -68,7 +68,7 @@ def buy():
         if cash <= (shares * price):
             return apology("not enough cash")
 
-        db.execute("UPDATE TABLE users )
+        db.execute("UPDATE users )
 
 
 
