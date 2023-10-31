@@ -35,8 +35,9 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    # get us
-    stocks = db.exectute
+    # get user stocks
+    stocks = db.execute("SELECT )
+
     return apology("ily")
 
 
