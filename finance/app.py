@@ -40,10 +40,12 @@ def index():
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
-    symbol = stocks[]
 
     for stock in stocks:
-        quote = lookup(stock[symbol])
+        quote = lookup(stock["symbol"])
+        stock["name"] = stock["name"]
+        stock["price"] = quote["price"]
+        stock["symbol"] = quote["symbol"]
 
 
     return apology("ily")
