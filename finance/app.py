@@ -69,6 +69,8 @@ def buy():
         if cash < total_cost:
             return apology("not enough cash")
 
+        rows = db.execute("SELECT * FORM users WHERE id = ?", session["user_id"])
+
         session["user_id"] = rows[0]["id"]
 
         db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, session["user_id"])
@@ -154,7 +156,7 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    
+
     session.clear()
 
     if request.method == "POST":
