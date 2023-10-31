@@ -184,7 +184,7 @@ def register():
         # check if database has username
         users = db.execute("SELECT * FROM users WHERE username = ?", username)
         if len(users) != 0:
-            return apology ("please enter different username")
+            return apology ("username already exists")
 
         # insert username and hash into database
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hash)
@@ -194,6 +194,7 @@ def register():
 
         # remember session
         session["user_id"] = rows[0]["id"]
+        
         return redirect("/")
 
     else:
