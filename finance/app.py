@@ -51,8 +51,8 @@ def index():
         stock["price"] = quote["price"]
         stock["symbol"] = quote["symbol"]
         total_shares += 1
-        grand_total += stock["price"] * total_shares
-        total_value +=
+        total_value += stock["price"] * total_shares
+        grand_total += 
 
 
     return apology("ily")
