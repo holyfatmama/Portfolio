@@ -197,7 +197,9 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    # render apology if fail to select a stock to sell
+    
     # lookup symbol to sell
 
-    # update database by removing previously bought transaction and updating cash balance with the CURRENT price 
+    # update database by removing previously bought transaction and updating cash balance with the CURRENT price
     return apology("TODO")
