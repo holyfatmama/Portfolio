@@ -65,10 +65,11 @@ def buy():
         cash = db.execute("SELECT cash FROM users WHERE id = ?", request.form.get("username"))
 
         # check if there is enough cash, if it is, update cash amount, if not return apology
-        if cash < (shares * price):
+        total_cost = shares * price
+        if cash < total_cost:
             return apology("not enough cash")
 
-        db.execute("UPDATE users SET cash = )
+        db.execute("UPDATE users SET cash = cash - total_cost)
 
 
 
