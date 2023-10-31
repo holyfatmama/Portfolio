@@ -51,14 +51,14 @@ def buy():
         if not shares or not shares.isdigit() or int(shares) <= 0:
             return apology("Please enter a correct amount of shares")
 
-        quote = lookup(shares)
-        if not quote:
+        quote = lookup(symbol)
+        if quote is None:
             return apology("symbol not found")
 
         price = quote["price"]
-        total_cost = shares * price
+        total_cost = int(shares) * price
         # select cash amount from database
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", request.form.get("username"))
+        cash = db.execute("SELECT * FROM users WHERE id = ?", request.form.get("username"))[0][cash]
 
         # check if there is enough cash, if it is, update cash amount, if not return apology
         if cash < total_cost:
