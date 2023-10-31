@@ -44,27 +44,23 @@ def index():
 def buy():
     """Buy shares of stock"""
     if request.method == "POST":
-
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
         if not symbol:
             return apology("Please input a symbol")
+        if not shares or not shares.isdigit() or int(shares) <= 0:
+            return apology("Please enter a correct amount of shares")
 
-        if not shares:
-            return apology("Please enter a correct amount")
-
-        quote = lookup(request.form.get("symbol"))
+        quote = lookup(shares)
         if not quote:
             return apology("symbol not found")
 
         price = quote["price"]
-        shares = request.form.get("shares")
-
+        total_cost = shares * price
         # select cash amount from database
         cash = db.execute("SELECT cash FROM users WHERE id = ?", request.form.get("username"))
 
         # check if there is enough cash, if it is, update cash amount, if not return apology
-        total_cost = shares * price
         if cash < total_cost:
             return apology("not enough cash")
 
