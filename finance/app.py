@@ -69,7 +69,7 @@ def buy():
         if cash < total_cost:
             return apology("not enough cash")
 
-        db.execute("UPDATE users SET cash = cash - total_cost)
+        db.execute("UPDATE users SET cash = cash - ? WHERE username = ?", total_cost, username)
 
 
 
