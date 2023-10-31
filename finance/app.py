@@ -38,6 +38,8 @@ def index():
     # get user stocks
     stocks = db.execute("SELECT * FROM transactions WHERE id = ?", session["user_id"])
 
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+
     return apology("ily")
 
 
