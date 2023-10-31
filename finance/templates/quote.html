@@ -5,13 +5,14 @@
 {% endblock %}
 
 {% block main %}
+
     <form action="/quote" method="post">
         <input name="symbol" placeholder="Symbol" type="text">
-        <buttom type="submit">Get Quote</buttom>
+        <button type="submit">Get Quote</button>
     </form>
 
     {% if quote %}
         <p> A share of {{ quote["name"] }} costs ${{ quote["price"] }}.</p>
     {% endif %}
-    
+
 {% endblock %}
