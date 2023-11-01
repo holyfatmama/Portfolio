@@ -8,9 +8,9 @@ print(stock2)
 for sto in stock:
     print(sto)
 
-shares = [{"symbol" : "aapl", "SUM(shares)" : "4"}, {"symbol" : "tsla", "SUM(shares)" : "6"}]
-
-
-print(shares[2])
+shares = [{"symbol" : "aapl", "SUM(shares)" : 4}, {"symbol" : "tsla", "SUM(shares)" : 6}]
+share = {}
+share["value"] = shares[0]["SUM(shares)"] + shares[1]["SUM(shares)"]
+print(share)
 
 
