@@ -52,7 +52,7 @@ def index():
         stock["value"]
         total_shares += 1
         total_value += stock["price"] * total_shares
-        grand_total +=
+        grand_total
 
 
     return render_template("/")
