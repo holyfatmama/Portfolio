@@ -1,5 +1,4 @@
-stock = {}
+stock = [{"name": "jun"}, {"name": "han"}]
 
-stock["list"] = 3
 
-print(stock(list))
+print(stock[0]["name"])
