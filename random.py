@@ -10,5 +10,5 @@ for sto in stock:
 
 shares = [{"symbol" : "aapl", "SUM(shares)" : "4"}, {"symbol" : "tsla", "SUM(shares)" : "6"}]
 
-for share in shares:
-    
+
+
