@@ -11,6 +11,6 @@ for sto in stock:
 shares = [{"symbol" : "aapl", "SUM(shares)" : 4}, {"symbol" : "tsla", "SUM(shares)" : 6}]
 share = {"gay":"yes"}
 share["values"] = shares[0]["SUM(shares)"] + shares[1]["SUM(shares)"]
-print(share)
+print(share["values"])
 
 
