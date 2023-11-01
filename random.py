@@ -1,4 +1,4 @@
 stock = [{"name": "jun"}, {"name": "han"}]
 
-
-print(stock[0]["name"])
+stock2["name"] = stock[0]["name"]
+print(stock2["name"])
