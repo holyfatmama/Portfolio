@@ -16,13 +16,13 @@
             </tr>
         </thead>
         <tbody>
-            {{% for stock in stocks %}}
+            {% for stock in stocks %}
                 <td>{{ stock.symbol }}</td>
                 <td>{{ stock.name }}</td>
                 <td>{{ stock.shares }}</td>
                 <td>{{ stock.price }}</td>
-                <td>{{ stock.price * stock.total_shares}}</td>
-            {{% endfor %}}
+                <td>{{ stock.price * stock.shares}}</td>
+            {% endfor %}
         </tbody>
         <tfoot>
             <tr>
