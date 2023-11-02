@@ -216,15 +216,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    # render apology if fail to select a stock to sell
+    if request.method == "POST":
 
-    # apology if fail to input amount
 
-    # use <option> to select stocks owned by looking through database
-
-    # lookup symbol to sell
-
-    # update database by removing previously bought transaction and updating cash balance with the CURRENT price
-
-    # POST action by selling
-    return apology("TODO")
+    return render_template("sell.html")
