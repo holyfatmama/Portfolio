@@ -38,7 +38,7 @@ def index():
     # get user stocks
     stocks = db.execute("SELECT symbol, SUM(shares) FROM transactions WHERE id = ?", session["user_id"])
 
-    cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
     total_value = cash
     grand_total = cash
@@ -47,7 +47,7 @@ def index():
         quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
         stock["price"] = quote["price"]
-        stock["value"] = stock["price"] * stock["shares"]
+        stock["value"] = stock["price"] * stock["SUM(shares)"]
         grand_total += stock["value"]
         total_value += stock["value"]
 
