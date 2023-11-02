@@ -245,7 +245,7 @@ def sell():
                     stock["total_value_sell"] = quote["price"] * number
                     cash += stock["total_value_sell"]
                     db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
-                    db.execute("INSERT INTO transactions)
+                    db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUE (?, ?, ?, ?)", session["user_id"], symbol, number, quote[price])
 
 
 
