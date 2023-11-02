@@ -16,16 +16,18 @@
             </tr>
         </thead>
         <tbody>
-                <td>{{ symbol }}</td>
-                <td>{{ symbol }}</td>
-                <td>{{ shares }}</td>
-                <td>{{ price }}</td>
-                <td>{{ total }}</td>
+            {{% for stock in stocks %}}
+                <td>{{ stock.symbol }}</td>
+                <td>{{ stock.name }}</td>
+                <td>{{ stock.shares }}</td>
+                <td>{{ stock.price }}</td>
+                <td>{{ stock.price * stock.total_shares}}</td>
+            {{% endfor %}}
         </tbody>
         <tfoot>
             <tr>
                 <td>Cash</td>
-                <td>{{ current cash left }}</td>
+                <td>{{ cash }}</td>
             </tr>
             <tr>
                 <td>TOTAL</td>
