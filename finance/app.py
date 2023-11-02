@@ -42,7 +42,7 @@ def index():
 
     total_value = cash
     grand_total = cash
-    total_shares = 0
+    total_shares = 
 
 
     for stock in stocks:
@@ -50,12 +50,11 @@ def index():
         stock["name"] = quote["name"]
         stock["price"] = quote["price"]
         stock["value"]
-        total_shares += 1
         total_value += stock["price"] * total_shares
         grand_total
 
 
-    return render_template("/")
+    return render_template("/", )
 
 
 @app.route("/buy", methods=["GET", "POST"])
