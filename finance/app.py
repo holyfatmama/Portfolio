@@ -228,8 +228,13 @@ def sell():
         if number < 0:
             return apology("Please input a correct amount")
 
+        if not symbol:
+            return apology("Please select correct stock to sell")
+
         for stock in stocks:
-            if number > stock
+            if symbol == stock.symbol:
+                if number > stock.SUM(shares):
+                    return apology("Please only enter amounts of shares you own")
 
 
 
