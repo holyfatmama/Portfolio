@@ -220,6 +220,7 @@ def sell():
 
         stocks = db.execute("SELECT symbol, SUM(shares) FROM transaction WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
 
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
         number = request.form.get("number")
         symbol = request.form.get("symbol")
@@ -235,6 +236,12 @@ def sell():
             if symbol == stock.symbol:
                 if number > stock.SUM(shares):
                     return apology("Please only enter amounts of shares you own")
+                else:
+                    quote = lookup(stock["symbol"])
+                    if quote is None
+                    stock["total_value_sell"] = quote["price"] * number
+                    cash += stock["total_value_sell"]
+                    db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
 
 
 
