@@ -220,11 +220,16 @@ def sell():
 
         stocks = db.execute("SELECT symbol, SUM(shares) FROM transaction WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
 
-        # check if number of shares selected is positive number
+
         number = request.form.get("number")
+        symbol = request.form.get("symbol")
+
+        # check if number of shares selected is positive number
         if number < 0:
             return apology("Please input a correct amount")
 
+        for stock in stocks:
+            if number > stock
 
 
 
