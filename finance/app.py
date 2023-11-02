@@ -238,7 +238,8 @@ def sell():
                     return apology("Please only enter amounts of shares you own")
                 else:
                     quote = lookup(stock["symbol"])
-                    if quote is None
+                    if quote is None:
+                        return apology("please enter correct symbol")
                     stock["total_value_sell"] = quote["price"] * number
                     cash += stock["total_value_sell"]
                     db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
