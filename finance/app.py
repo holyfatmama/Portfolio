@@ -43,13 +43,11 @@ def index():
     total_value = cash
     grand_total = cash
 
-
     for stock in stocks:
         quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
         stock["price"] = quote["price"]
-        stock["total_shares"] = stock["shares"]
-        stock["value"] = stock["price"] * stock["total_shares"]
+        stock["value"] = stock["price"] * stock["shares"]
         grand_total += stock["value"]
         total_value += stock["value"]
 
