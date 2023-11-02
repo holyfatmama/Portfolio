@@ -40,7 +40,7 @@ def index():
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
-    total_value = cash
+
     grand_total = cash
 
     for stock in stocks:
@@ -50,7 +50,7 @@ def index():
         stock["total_shares"] = stock["SUM(shares)"]
         stock["value"] = stock["price"] * stock["total_shares"]
         grand_total += stock["value"]
-        total_value += stock["value"]
+
 
 
     return render_template("index.html", stocks=stocks, cash=cash, grand_total=grand_total)
@@ -217,6 +217,7 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "POST":
+        stocks = db.execute("SELECT symbol, SUM(shares) FROM transaction WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
 
 
     return render_template("sell.html")
