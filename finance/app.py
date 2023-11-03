@@ -236,8 +236,8 @@ def sell():
 
 
         for stock in stocks:
-            if symbol == stock.symbol:
-                if number > stock.SUM(shares):
+            if symbol == stock["symbol"]:
+                if shares > stock["SUM(shares)"]:
                     return apology("Please only enter amounts of shares you own")
                 else:
                     quote = lookup(stock["symbol"])
