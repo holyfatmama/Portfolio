@@ -226,7 +226,7 @@ def sell():
         symbol = request.form.get("symbol")
 
         # check if number of shares selected is positive number
-        if int(shares) <= 0 or not shares.isdigit() or not shares:
+        if int(float(shares)) <= 0 or not shares.isdigit() or not shares:
             return apology("Please input a correct amount")
         else:
             shares = int(shares)
