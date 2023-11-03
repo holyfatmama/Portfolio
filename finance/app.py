@@ -223,7 +223,7 @@ def sell():
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
         number = request.form.get("number")
-        symbol = request.form.get("symbol").upper()
+        symbol = request.form.get("symbol")
 
         # check if number of shares selected is positive number
         if int(number) < 0 or not number.isdigit() or not number:
