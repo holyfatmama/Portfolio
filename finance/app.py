@@ -216,23 +216,24 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    stocks = db.execute("SELECT symbol, SUM(shares) FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
     if request.method == "POST":
-
-        stocks = db.execute("SELECT symbol, SUM(shares) FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0", session["user_id"])
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
         shares = request.form.get("shares")
         symbol = request.form.get("symbol")
 
+
         # check if number of shares selected is positive number
-        if int(float(shares)) <= 0 or not shares.isdigit() or not shares:
+
+        if not symbol:
+            return apology("Please select correct stock to sell")
+        elif int(float(shares)) <= 0 or not shares.isdigit() or not shares:
             return apology("Please input a correct amount")
         else:
             shares = int(shares)
 
-        if not symbol:
-            return apology("Please select correct stock to sell")
 
         for stock in stocks:
             if symbol == stock.symbol:
