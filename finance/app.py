@@ -222,14 +222,16 @@ def sell():
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
-        number = request.form.get("number")
+        shares = request.form.get("shares")
         symbol = request.form.get("symbol")
 
+
+
         # check if number of shares selected is positive number
-        if int(number) < 0 or not number.isdigit() or not number:
+        if shares < 0 or not sbares.isdigit() or not shares:
             return apology("Please input a correct amount")
         else:
-            number = int(number)
+            shares = int(shares)
 
         if not symbol:
             return apology("Please select correct stock to sell")
@@ -245,7 +247,7 @@ def sell():
                     stock["total_value_sell"] = quote["price"] * number
                     cash += stock["total_value_sell"]
                     db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
-                    db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUE (?, ?, ?, ?)", session["user_id"], symbol, number, quote[price])
+                    db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUE (?, ?, ?, ?)", session["user_id"], symbol, number, quote["price"])
 
 
 
