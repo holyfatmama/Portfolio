@@ -10,4 +10,8 @@
         <input name="shares" placeholder="Number of Shares" type="number" min="1">
         <button type="submit">Buy</input>
     </form>
+
+    {% if quote %}
+        <p>Bought {{ shares }} </p>
+    {% endif %}
 {% endblock %}
