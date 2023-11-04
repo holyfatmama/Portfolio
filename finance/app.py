@@ -259,9 +259,13 @@ def sell():
 def addcash():
     if request.method == "POST":
         amount = request.form.get("amount")
-        cash = db.execute("SELECT cash FROM users WHERE user_id = ?")
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+        newcash = float(amount) + cash
 
-        if amount <= 0:
+        if float(amount) <= 0:
             return apology("Please enter a correct amount")
         else:
-            db.execute("UPDATE users SET cash")
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", amount, session["user_id"])
+
+    else:
+        return render_template("addcash.html")
