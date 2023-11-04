@@ -89,7 +89,7 @@ def buy():
 
         flash(f"Bought {shares} shares of {symbol} for USD ${total_cost}!")
 
-        return redirect("/")
+        return redirect("/", quote=quote)
 
     else:
         return render_template("buy.html")
