@@ -101,8 +101,8 @@ def history():
     """Show history of transactions"""
     # look through each line of transaction where ? equals to username and display it
     transactions = db.execute("SELECT * FROM transactons WHERE user_id = ?", session["user_id"])
-    
-    return apology("TODO")
+
+    return render_template("history.html",  transactions = transactions)
 
 
 @app.route("/login", methods=["GET", "POST"])
