@@ -243,10 +243,10 @@ def sell():
                     quote = lookup(stock["symbol"])
                     if quote is None:
                         return apology("please enter correct symbol")
-                    stock["total_value_sell"] = quote["price"] * number
+                    stock["total_value_sell"] = quote["price"] * shares
                     cash += stock["total_value_sell"]
                     db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
-                    db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUE (?, ?, ?, ?)", session["user_id"], symbol, number, quote["price"])
+                    db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUEs (?, ?, ?, ?)", session["user_id"], symbol, shares, quote["price"])
 
 
 
