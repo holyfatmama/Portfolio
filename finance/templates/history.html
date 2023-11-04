@@ -11,6 +11,7 @@
                 <th class="text-start">Symbol</th>
                 <th class="text-end">Shares</th>
                 <th class="text-end">Price</th>
+                <th class="text-end">Transaction total</th>
                 <th class="text-end">Transacted</th>
             </tr>
         </thead>
@@ -20,6 +21,7 @@
                 <td class="text-start">{{ transaction.symbol }}</td>
                 <td class="text-end">{{ transaction.shares }}</td>
                 <td class="text-end">{{ transaction.price }}</td>
+                <td class="text-end">{{ transaction.price * transaction.shares }}</td>
                 <td class="text-end">{{ transaction.timestamp }}</td>
             </tr>
             {% endfor %}

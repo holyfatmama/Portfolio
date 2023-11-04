@@ -100,7 +100,7 @@ def buy():
 def history():
     """Show history of transactions"""
     # look through each line of transaction where ? equals to username and display it
-    transactions = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
+    transactions = db.execute("SELECT * FROM transactions WHERE user_id = ? ORDER BY timestamp DESC", session["user_id"])
 
     return render_template("history.html",  transactions = transactions)
 
