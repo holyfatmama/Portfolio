@@ -254,3 +254,11 @@ def sell():
 
     else:
         return render_template("sell.html", stocks=stocks)
+
+@app.route("/addcash", methods=["GET", "POST"])
+def addcash():
+    if request.method == "POST":
+        amount = request.form.get("amount")
+
+        if amount <= 0:
+            return apology("Please enter a correct amount")
