@@ -265,7 +265,7 @@ def addcash():
         if float(amount) <= 0:
             return apology("Please enter a correct amount")
         else:
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", amount, session["user_id"])
-
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", newcash, session["user_id"])
+        return redirect("/")
     else:
         return render_template("addcash.html")
