@@ -160,7 +160,7 @@ def quote():
         symbol = request.form.get("symbol").upper()
         quote = lookup(symbol)
         if not quote:
-            return apology("Please enter correct symbol")
+            return apology("Please enter correct symbol", 400)
         return render_template("quote.html", quote=quote)
     else:
         return render_template("quote.html")
