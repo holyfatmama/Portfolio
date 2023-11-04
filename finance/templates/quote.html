@@ -12,7 +12,7 @@
     </form>
 
     {% if quote %}
-        <p> A share of {{ quote["name"] }} costs ${{ quote["price"] }}.</p>
+        <p> A share of {{ quote["name"] }} costs ${{ quote["price"]|usd }}.</p>
     {% endif %}
 
 {% endblock %}
