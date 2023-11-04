@@ -12,6 +12,6 @@
     </form>
 
     {% if quote %}
-        <p>Bought {{ shares }} shares of {{ quote.symbol }} at ${{ quote.price }} for a total of ${{ shares * quote.price }}!</p>
+        <p>Bought {{ shares }} shares of {{ quote.symbol }} at ${{ quote.price }} for a total of ${{ (shares * quote.price)|usd }}!</p>
     {% endif %}
 {% endblock %}
