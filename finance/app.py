@@ -89,7 +89,7 @@ def buy():
 
         flash(f"Bought {shares} shares of {symbol} for USD ${total_cost}!")
 
-        return redirect("/", quote=quote, shares)
+        return redirect("/", quote=quote, shares=shares)
 
     else:
         return render_template("buy.html")
@@ -266,6 +266,7 @@ def addcash():
             return apology("Please enter a correct amount")
         else:
             db.execute("UPDATE users SET cash = ? WHERE id = ?", newcash, session["user_id"])
+            flash(f"Added {usd(float(amount))}!")
         return redirect("/")
     else:
         return render_template("addcash.html")
