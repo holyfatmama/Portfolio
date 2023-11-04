@@ -247,7 +247,8 @@ def sell():
                     cash += stock["total_value_sell"]
                     db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
                     db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)", session["user_id"], symbol, -shares, quote["price"])
+                    flash(f" Sold {shares} share(s) of {symbol} for USD ${quote["price"]}!")
+                    return redirect ("/")
 
-
-
-    return render_template("sell.html", stocks=stocks)
+    else:
+        return render_template("sell.html", stocks=stocks)
