@@ -7,3 +7,6 @@ app = Flask(__name__)
 
 db = SQL("sqlite:///tasks.db")
 
+@app.route("/")
+def index():
+    return render_template("index.html")
