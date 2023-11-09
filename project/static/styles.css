@@ -21,3 +21,9 @@ nav .navbar-brand .green
 {
     color: #2e944b;
 }
+
+details
+{
+    text-align: left;
+    vertical-align: top;
+}
