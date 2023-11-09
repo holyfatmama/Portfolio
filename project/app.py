@@ -23,5 +23,6 @@ def addtask():
         db.execute("INSERT INTO tasks (task, detail, importance, deadline) VALUES (?, ?, ?, ?)", task, detail, importance, deadline)
         flash("Task Added!")
 
+        return redirect("/")
     else:
         return render_template("addtask.html")
