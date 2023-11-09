@@ -1,7 +1,7 @@
 import os
 
 from cs50 import SQL
-from flask import render_template, redirect, Flask, request
+from flask import render_template, redirect, Flask, request, flash
 
 app = Flask(__name__)
 
@@ -20,8 +20,8 @@ def addtask():
         deadline = request.form.get("deadline")
         if not importance:
             importance = 0
+        db.execute("INSERT INTO tasks (task, detail, importance, deadline) VALUES (?, ?, ?, ?)", task, detail, importance, deadline)
+        flash("Task Added!")
 
-    db.execute("INSERT INTO tasks (task, detail, importance, ))
-
-
-    return render_template("addtask.html")
+    else:
+        return render_template("addtask.html")
