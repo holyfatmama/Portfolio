@@ -25,4 +25,5 @@ nav .navbar-brand .green
 .details {
     overflow-wrap: break-word;
     border: 1px;
+    text-align: left;
 }
