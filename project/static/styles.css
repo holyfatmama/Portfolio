@@ -23,5 +23,5 @@ nav .navbar-brand .green
 }
 
 .details {
-    word-wrap: normal;
+    word-wrap: break-word;
 }
