@@ -21,7 +21,7 @@ def addtask():
         if not importance:
             importance = 0
 
-    db.execute("INSERT INTO tasks ())
+    db.execute("INSERT INTO tasks (task, detail, importance, ))
 
 
     return render_template("addtask.html")

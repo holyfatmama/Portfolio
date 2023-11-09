@@ -40,6 +40,7 @@ def index():
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
+
     grand_total = cash
 
     for stock in stocks:
