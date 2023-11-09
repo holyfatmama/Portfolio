@@ -13,4 +13,8 @@ def index():
 
 @app.route("/addtask", methods=["GET", "POST"])
 def addtask():
-        return render_template("addtask.html")
+    if request.method == "POST":
+        task = request.form.get("task")
+        detail = request.form.get("detail")
+
+    return render_template("addtask.html")
