@@ -23,6 +23,6 @@ nav .navbar-brand .green
 }
 
 .details {
-    word-wrap: break-all;
+    overflow-wrap: break-word;
     border: 1px;
 }
