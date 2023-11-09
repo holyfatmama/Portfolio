@@ -13,10 +13,4 @@ def index():
 
 @app.route("/addtask", methods=["GET", "POST"])
 def addtask():
-    if request.method == "POST":
-
-        # flash added message after adding it in
-        return render_template("index.html")
-
-    else:
         return render_template("addtask.html")
