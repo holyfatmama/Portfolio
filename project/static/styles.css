@@ -22,6 +22,6 @@ nav .navbar-brand .green
     color: #2e944b;
 }
 
-input[type="text"] {
-    vertical-align: top;
+.details {
+    word-wrap: normal;
 }
