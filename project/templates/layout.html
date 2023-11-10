@@ -30,6 +30,7 @@
                         <ul class="navbar-nav ms-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/addtask">Add Task</a></li>
                             <li class="nav-item"><a class="nav-link" href="/">Tasks</a></li>
+                            {% block deletetask %}{% endblock %}
                             <form action="/" method="post">
                                 <select name="completed">
                                     {% for task in tasks %}
