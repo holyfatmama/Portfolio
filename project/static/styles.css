@@ -27,3 +27,14 @@ nav .navbar-brand .green
     border: 1px;
     text-align: left;
 }
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.detail {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
