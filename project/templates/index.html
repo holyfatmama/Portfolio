@@ -17,16 +17,24 @@
 
 {% block main%}
     {% for task in tasks %}
-    <form>
-        <button type="button" class="collapsible">{{ task.task }}</button>
-        <div class="content alert alert-danger">
-            <textarea rows="10" cols="200">{{ task.detail }}</textarea>
-            <p>Deadline: {{ task.deadline }}</p>
-            {% if task.importance == 1 %}
-            <p class="alert alert-danger">IMPORTANT</p>
-            {% endif %}
-        </div>
-    </form>
+        {% if task.importance == 1 %}
+        <form>
+            <button type="button" class="collapsible">{{ task.task }}</button>
+            <div class="content alert alert-danger bg-danger text-white">
+                <textarea rows="10" cols="200">{{ task.detail }}</textarea>
+                <p>Deadline: {{ task.deadline }}</p>
+                <p class="alert alert-danger">IMPORTANT</p>
+            </div>
+        </form>
+        {% else %}
+        <form>
+            <button type="button" class="collapsible">{{ task.task }}</button>
+            <div class="content">
+                <textarea rows="10" cols="200">{{ task.detail }}</textarea>
+                <p>Deadline: {{ task.deadline }}</p>
+            </div>
+        </form>
+        {% endif %}
     {% endfor %}
     <script>
         var coll = document.getElementsByClassName("collapsible");
