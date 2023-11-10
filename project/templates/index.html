@@ -5,9 +5,11 @@
 {% endblock %}
 
 {% block main%}
+    {% for task in tasks %}
     <p>Tasks</p>
-    <button type="button" class="collapsible">{{ tasks.task }}</button>
+    <button type="button" class="collapsible">{{ task.task }}</button>
     <div class="detail">
-        <p>{{ tasks.detail }}</p>
+        <p>{{ task.detail }}</p>
     </div>
+    {% endfor %}
 {% endblock %}
