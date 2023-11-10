@@ -21,6 +21,10 @@
         <button type="button" class="collapsible">{{ task.task }}</button>
         <div class="content">
             <textarea rows="10" cols="200">{{ task.detail }}</textarea>
+            <p>Deadline: {{ task.deadline }}</p>
+            {% if task.importance == 1 %}
+            <p class="alert alert-danger">IMPORTANT</p>
+            {% endif %}
         </div>
     </form>
     {% endfor %}
