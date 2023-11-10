@@ -20,7 +20,7 @@
     <form>
         <button type="button" class="collapsible">{{ task.task }}</button>
         <div class="content">
-            <p>{{ task.detail }}</p>
+            <textarea rows="10" cols="200">{{ task.detail }}</textarea>
         </div>
     </form>
     {% endfor %}

@@ -11,8 +11,9 @@ db = SQL("sqlite:///tasks.db")
 def index():
     tasks = db.execute("SELECT * FROM tasks")
     if request.method == "POST":
-        task = request.form.get("task")
-        
+        id = request.form.get("id")
+        db.execute("DELETE  FROM tasks WHERE id = ?", id)
+        return render_template ("index.html", tasks = tasks)
     else:
         return render_template("index.html", tasks = tasks)
 
