@@ -9,7 +9,9 @@ db = SQL("sqlite:///tasks.db")
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+
+    tasks = db.execute("SELECT * FROM tasks")
+    return render_template("index.html", tasks = tasks)
 
 @app.route("/addtask", methods=["GET", "POST"])
 def addtask():
