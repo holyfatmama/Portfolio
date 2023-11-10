@@ -15,7 +15,6 @@ def index():
         id = request.form.get("id")
         db.execute("DELETE FROM tasks WHERE id = ?", id)
         return render_template ("index.html", tasks = tasks)
-
     else:
         return render_template("index.html", tasks = tasks)
 
@@ -30,8 +29,6 @@ def addtask():
         if not importance:
             importance = 0
         db.execute("INSERT INTO tasks (task, detail, importance, deadline) VALUES (?, ?, ?, ?)", task, detail, importance, deadline)
-        time.sleep(1)
         return render_template("index.html", tasks = tasks)
     else:
-        time.sleep(1)
         return render_template("addtask.html", tasks = tasks)
