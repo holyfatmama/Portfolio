@@ -7,11 +7,14 @@ app = Flask(__name__)
 
 db = SQL("sqlite:///tasks.db")
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def index():
+    if request.method == "POST":
+
 
     tasks = db.execute("SELECT * FROM tasks")
-    return render_template("index.html", tasks = tasks)
+    else:
+        return render_template("index.html", tasks = tasks)
 
 @app.route("/addtask", methods=["GET", "POST"])
 def addtask():
