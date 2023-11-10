@@ -9,12 +9,11 @@ db = SQL("sqlite:///tasks.db")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    if request.method == "POST":
-
-
     tasks = db.execute("SELECT * FROM tasks")
-    else:
-        return render_template("index.html", tasks = tasks)
+        if request.method == "POST":
+            
+        else:
+            return render_template("index.html", tasks = tasks)
 
 @app.route("/addtask", methods=["GET", "POST"])
 def addtask():

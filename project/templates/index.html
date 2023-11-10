@@ -5,15 +5,9 @@
 {% endblock %}
 
 {% block main%}
-    <table>
-        <thead>
-            <tr>
-                <th>S/N</th>
-                <th>Task</th>
-                <th>Deadline</th>
-                <th>Created</th>
-            </tr>
-        </thead>
-    </table>
-
+    <p>Tasks</p>
+    <button type="button" class="collapsible">{{ tasks.task }}</button>
+    <div class="detail">
+        <p>{{ tasks.detail</p>
+    </div>
 {% endblock %}
