@@ -28,6 +28,6 @@ def addtask():
         if not importance:
             importance = 0
         db.execute("INSERT INTO tasks (task, detail, importance, deadline) VALUES (?, ?, ?, ?)", task, detail, importance, deadline)
-        return redirect("index.html", tasks = tasks)
+        return render_template("index.html", tasks = tasks)
     else:
         return render_template("addtask.html", tasks = tasks)
