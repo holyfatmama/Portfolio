@@ -31,14 +31,6 @@
                             <li class="nav-item"><a class="nav-link" href="/addtask">Add Task</a></li>
                             <li class="nav-item"><a class="nav-link" href="/">Tasks</a></li>
                             {% block deletetask %}{% endblock %}
-                            <form action="/" method="post">
-                                <select name="completed">
-                                    {% for task in tasks %}
-                                    <option value=""{{ task.task }}" class="nav-item">{{ task. task }}</option>
-                                    {% endfor %}
-                                </select>
-                                <button type="submit">Completed</button>
-                            </form>
                         </ul>
                 </div>
             </div>
