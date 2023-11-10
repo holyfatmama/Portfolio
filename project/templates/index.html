@@ -1,14 +1,14 @@
 {% extends "layout.html" %}
 
 {% block deletetask %}
-<form action="/" method="post">
-    <select name="completed">
-        {% for task in tasks %}
-        <option value="{{ task.task }}" class="nav-item">{{ task. task }}</option>
-        {% endfor %}
-    </select>
-    <button type="submit">Completed</button>
-</form>
+    <form action="/" method="post">
+        <select name="completed">
+            {% for task in tasks %}
+            <option value="{{ task.id }}" class="nav-item">{{ task. id }}. {{ task. task }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Completed</button>
+    </form>
 {% endblock %}
 
 {% block title %}

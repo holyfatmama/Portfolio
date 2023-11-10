@@ -11,7 +11,8 @@ db = SQL("sqlite:///tasks.db")
 def index():
     tasks = db.execute("SELECT * FROM tasks")
     if request.method == "POST":
-        task
+        task = request.form.get("task")
+        
     else:
         return render_template("index.html", tasks = tasks)
 
