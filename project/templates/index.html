@@ -5,18 +5,15 @@
 {% endblock %}
 
 {% block main%}
-    <button type="button" class="collapsible">me</button>
+    {% for task in tasks %}
+    <button type="button" class="collapsible">{{ task.task }}</button>
     <div class="content">
-        <p>im gadwjiophdawdhjklwahdjkawhdjkly</p>
+        <p>{{ task.detail }}</p>
     </div>
-    <button type="button" class="collapsible">you</button>
-    <div class="content">
-        <p>dwjk;hdjkwhdjklawhjkdw</p>
-    </div>
+    {% endfor %}
     <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
-
         for (i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function() {
                 this.classList.toggle("active");
