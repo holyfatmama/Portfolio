@@ -6,10 +6,13 @@
 
 {% block main%}
     {% for task in tasks %}
-    <button type="button" class="collapsible">{{ task.task }}</button>
-    <div class="content">
-        <p>{{ task.detail }}</p>
-    </div>
+    <form>
+        <button type="button" class="collapsible">{{ task.task }}</button>
+        <div class="content">
+            <p>{{ task.detail }}</p>
+        </div>
+        <button type="submit">Delete</button>
+    </form>
     {% endfor %}
     <script>
         var coll = document.getElementsByClassName("collapsible");
