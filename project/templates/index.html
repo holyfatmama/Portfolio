@@ -2,7 +2,7 @@
 
 {% block deletetask %}
     <form action="/" method="post">
-        <select name="completed">
+        <select name="id">
             {% for task in tasks %}
             <option value="{{ task.id }}" class="nav-item">{{ task. id }}. {{ task. task }}</option>
             {% endfor %}
