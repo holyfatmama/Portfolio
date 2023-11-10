@@ -14,8 +14,10 @@ def index():
     if request.method == "POST":
         id = request.form.get("id")
         db.execute("DELETE FROM tasks WHERE id = ?", id)
+        time.sleep(1)
         return render_template ("index.html", tasks = tasks)
     else:
+        time.sleep(1)
         return render_template("index.html", tasks = tasks)
 
 @app.route("/addtask", methods=["GET", "POST"])
@@ -29,6 +31,8 @@ def addtask():
         if not importance:
             importance = 0
         db.execute("INSERT INTO tasks (task, detail, importance, deadline) VALUES (?, ?, ?, ?)", task, detail, importance, deadline)
+        time.sleep(1)
         return render_template("index.html", tasks = tasks)
     else:
+        time.sleep(1)
         return render_template("addtask.html", tasks = tasks)
