@@ -20,7 +20,7 @@
         {% if task.importance == 1 %}
         <form>
             <button type="button" class="collapsible bg-danger">{{ task.task }}</button>
-            <div class="content alert alert-danger bg-danger text-white">
+            <div class="content">
                 <textarea rows="10" cols="200">{{ task.detail }}</textarea>
                 <p>Deadline: {{ task.deadline }}</p>
                 <p class="alert alert-danger">IMPORTANT</p>
