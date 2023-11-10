@@ -33,15 +33,15 @@
                             <form action="/" method="post">
                                 <select name="completed">
                                     {% for task in tasks %}
-                                    <option value=""{{ task.task }}">{{ task. task }}</option>
+                                    <option value=""{{ task.task }}" class="nav-item">{{ task. task }}</option>
                                     {% endfor %}
                                 </select>
+                                <button type="submit">Completed</button>
                             </form>
                         </ul>
                 </div>
             </div>
         </nav>
-
         {% if get_flashed_messages() %}
             <header>
                 <div class="alert alert-primary mb-0 text-center" role="alert">

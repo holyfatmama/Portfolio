@@ -14,6 +14,7 @@ def index():
 
 @app.route("/addtask", methods=["GET", "POST"])
 def addtask():
+    tasks = db.execute("SELECT * FROM tasks")
     if request.method == "POST":
         task = request.form.get("task")
         detail = request.form.get("detail")
@@ -22,6 +23,6 @@ def addtask():
         if not importance:
             importance = 0
         db.execute("INSERT INTO tasks (task, detail, importance, deadline) VALUES (?, ?, ?, ?)", task, detail, importance, deadline)
-        return redirect("/")
+        return redirect("/", tasks = tasks)
     else:
-        return render_template("addtask.html")
+        return render_template("addtask.html", tasks = tasks)
