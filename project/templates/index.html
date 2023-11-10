@@ -13,13 +13,17 @@
     </div>
     {% endfor %}
     <script>
-        let collapsibles = document.querySelectorAll('.collapsible');
+        let collapsibles = document.getElementsByClassName('.collapsible');
         for (let i = 0; i < collapsible.length; i++){
             collapsibles[i].addEventListener('click', function(){
                 collapsible.classList.toggle("active");
                 detail = collapsibles.nextElementSibilng;
-                if (detail.style.display === '
-            })
+                if (detail.style.display === 'block'){
+                    detail.style.display = "none";
+                } else {
+                    detail.style.display = "block";
+                }
+            });
         }
     </script>
 {% endblock %}
