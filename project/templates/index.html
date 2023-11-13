@@ -24,6 +24,7 @@
             <div class="content">
                 <textarea rows="10" cols="200">{{ task.detail }}</textarea>
                 <p>Deadline: {{ task.deadline }}</p>
+                <p>Created: {{ task.timestamp }}</p>
                 <p class="alert alert-danger">IMPORTANT</p>
             </div>
         </form>
@@ -33,6 +34,7 @@
             <div class="content">
                 <textarea rows="10" cols="200">{{ task.detail }}</textarea>
                 <p>Deadline: {{ task.deadline }}</p>
+                <p>Created: {{ task.timestamp }}</p>
             </div>
         </form>
         {% endif %}
