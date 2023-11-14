@@ -58,7 +58,8 @@ nav .navbar-brand .green
 .detailsdiv {
     border: 2px solid;
     padding: 20px;
-    width: 300px;
+    width: 500px;
+    height: 300px;
     resize: both;
     overflow: auto;
 }

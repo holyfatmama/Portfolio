@@ -21,6 +21,7 @@
         <thead>
             <tr>
                 <th data-sortable="true" scope="col">Task</th>
+                <th scope="col">Important?</th>
                 <th scope="col">Deadline</th>
                 <th scope="col">Created</th>
             </tr>
@@ -35,6 +36,7 @@
                         <p>Created: {{ task.timestamp }}</p>
                     </div>
                 </td>
+                <td>{{ task.importance }}</td>
                 <td>{{ task.deadline }}</td>
                 <td>{{ task.timestamp }}</td>
             </tr>
