@@ -16,11 +16,6 @@
 {% endblock %}
 
 {% block main%}
-<style>
-#collapsiblehover:hover {
-    background-color: #555;
-}
-</style>
     <h1 class="mb-3">TASKS:</h1>
     <table class="table sortable">
         <thead>
@@ -36,7 +31,7 @@
             {% if task.importance|string()=='1' %}
             <tr class="bg-danger text-white">
                 <td>
-                    <button type="button" class="collapsible bg-danger" id="collapsiblehover">{{ task.task }}</button>
+                    <button type="button" class="collapsible bg-danger collapsiblehover" id="collapsiblehover">{{ task.task }}</button>
                     <div class="content">
                         <textarea class="detailsdiv">{{ task.detail }}</textarea>
                     </div>
