@@ -55,24 +55,6 @@
             {% endfor %}
         </tbody>
     </table>
-    {% for task in tasks %}
-        {% if task.importance == 1 %}
-        <button type="button" class="collapsible bg-danger">{{ task.task }}</button>
-        <div class="content">
-            <textarea rows="10" cols="200">{{ task.detail }}</textarea>
-            <p>Deadline: {{ task.deadline }}</p>
-            <p>Created: {{ task.timestamp }}</p>
-            <p class="alert alert-danger">IMPORTANT</p>
-        </div>
-        {% else %}
-        <button type="button" class="collapsible">{{ task.task }}</button>
-        <div class="content">
-            <textarea rows="10" cols="200">{{ task.detail }}</textarea>
-            <p>Deadline: {{ task.deadline }}</p>
-            <p>Created: {{ task.timestamp }}</p>
-        </div>
-        {% endif %}
-    {% endfor %}
     <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
