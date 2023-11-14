@@ -30,7 +30,7 @@
             {% for task in tasks %}
             <tr>
                 <td>
-                    {% if task.importance=='1' %}
+                    {% if task.importance=='0' %}
                     <button type="button" class="collapsible">{{ task.task }}</button>
                     <div class="content">
                         <textarea class="detailsdiv">{{ task.detail }}</textarea>
