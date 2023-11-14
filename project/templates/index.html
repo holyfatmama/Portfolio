@@ -30,10 +30,11 @@
             <tr>
                 <td><button type="button" class="collapsible">{{ task.task }}</button>
                     <div class="content">
-                        <p>{{ task.detail }}</p>
+                        <textarea class="detailsdiv">{{ task.detail }}</textarea>
                         <p>Deadline: {{ task.deadline }}</p>
                         <p>Created: {{ task.timestamp }}</p>
-                    </div></td>
+                    </div>
+                </td>
                 <td>{{ task.deadline }}</td>
                 <td>{{ task.timestamp }}</td>
             </tr>
