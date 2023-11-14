@@ -31,7 +31,7 @@
             {% if task.importance|string()=='1' %}
             <tr class="bg-danger text-white">
                 <td>
-                    <button type="button" class="collapsible bg-danger collapsiblehover" id="collapsiblehover">{{ task.task }}</button>
+                    <button type="button" class="collapsible" style="background-color:red">{{ task.task }}</button>
                     <div class="content">
                         <textarea class="detailsdiv">{{ task.detail }}</textarea>
                     </div>
