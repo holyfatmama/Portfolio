@@ -29,7 +29,7 @@
         <tbody>
             {% for task in tasks %}
             {% if task.importance|string()=='1' %}
-            <tr class="bg-danger">
+            <tr class="bg-danger" style="color:white;">
                 <td>
                     <button type="button" class="collapsible bg-danger">{{ task.task }}</button>
                     <div class="content">
