@@ -28,30 +28,31 @@
         </thead>
         <tbody>
             {% for task in tasks %}
-            <tr>
+            {% if task.importance|string()=='1' %}
+            <tr class="bg-danger">
                 <td>
-                    {% if task.importance|string()=='1' %}
                     <button type="button" class="collapsible bg-danger">{{ task.task }}</button>
                     <div class="content">
                         <textarea class="detailsdiv">{{ task.detail }}</textarea>
                     </div>
-                    {% else %}
+                </td>
+                <td>Yes</td>
+                <td>{{ task.deadline }}</td>
+                <td>{{ task.timestamp }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td>
                     <button type="button" class="collapsible">{{ task.task }}</button>
                     <div class="content">
                         <textarea class="detailsdiv">{{ task.detail }}</textarea>
                     </div>
-                    {% endif %}
                 </td>
-                <td>
-                    {% if task.importance|string()=='1' %}
-                    <p>Yes</p>
-                    {% else %}
-                    <p>No</p>
-                    {% endif %}
-                </td>
+                <td>No</td>
                 <td>{{ task.deadline }}</td>
                 <td>{{ task.timestamp }}</td>
             </tr>
+            {% endif %}
             {% endfor %}
         </tbody>
     </table>
