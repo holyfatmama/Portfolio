@@ -17,6 +17,18 @@
 
 {% block main%}
     <h1 class="mb-3">TASKS:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Deadline</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr></tr>
+        </tbody>
+    </table>
     {% for task in tasks %}
         {% if task.importance == 1 %}
         <button type="button" class="collapsible bg-danger">{{ task.task }}</button>
