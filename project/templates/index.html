@@ -29,12 +29,18 @@
         <tbody>
             {% for task in tasks %}
             <tr>
-                <td><button type="button" class="collapsible">{{ task.task }}</button>
+                <td>
+                    {% if task.importance=='1' %}
+                    <button type="button" class="collapsible">{{ task.task }}</button>
                     <div class="content">
                         <textarea class="detailsdiv">{{ task.detail }}</textarea>
-                        <p>Deadline: {{ task.deadline }}</p>
-                        <p>Created: {{ task.timestamp }}</p>
                     </div>
+                    {% else %}
+                    <button type="button" class="collapsible bg-danger">{{ task.task }}</button>
+                    <div class="content">
+                        <textarea class="detailsdiv">{{ task.detail }}</textarea>
+                    </div>
+                    {% endif %}
                 </td>
                 <td>
                     {% if task.importance=='1' %}
