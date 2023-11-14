@@ -36,7 +36,13 @@
                         <p>Created: {{ task.timestamp }}</p>
                     </div>
                 </td>
-                <td>{{ task.importance }}</td>
+                <td>
+                    {% if task.importance=='1' %}
+                    <p>Yes</p>
+                    {% else %}
+                    <p>No</p>
+                    {% endif %}
+                </td>
                 <td>{{ task.deadline }}</td>
                 <td>{{ task.timestamp }}</td>
             </tr>
