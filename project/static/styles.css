@@ -56,7 +56,7 @@ nav .navbar-brand .green
 }
 
 .memefont {
-    font-family: "Brush Script MT", cursive;
+    font-family: "Comic Sans MS", cursive;
 }
 
 .detailsdiv {
@@ -66,4 +66,8 @@ nav .navbar-brand .green
     height: 300px;
     resize: both;
     overflow: auto;
+}
+
+.bg-danger {
+    color: white;
 }
