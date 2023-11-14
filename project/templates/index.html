@@ -19,24 +19,20 @@
     <h1 class="mb-3">TASKS:</h1>
     {% for task in tasks %}
         {% if task.importance == 1 %}
-        <form>
-            <button type="button" class="collapsible bg-danger">{{ task.task }}</button>
-            <div class="content">
-                <textarea rows="10" cols="200">{{ task.detail }}</textarea>
-                <p>Deadline: {{ task.deadline }}</p>
-                <p>Created: {{ task.timestamp }}</p>
-                <p class="alert alert-danger">IMPORTANT</p>
-            </div>
-        </form>
+        <button type="button" class="collapsible bg-danger">{{ task.task }}</button>
+        <div class="content">
+            <textarea rows="10" cols="200">{{ task.detail }}</textarea>
+            <p>Deadline: {{ task.deadline }}</p>
+            <p>Created: {{ task.timestamp }}</p>
+            <p class="alert alert-danger">IMPORTANT</p>
+        </div>
         {% else %}
-        <form>
-            <button type="button" class="collapsible">{{ task.task }}</button>
-            <div class="content">
-                <textarea rows="10" cols="200">{{ task.detail }}</textarea>
-                <p>Deadline: {{ task.deadline }}</p>
-                <p>Created: {{ task.timestamp }}</p>
-            </div>
-        </form>
+        <button type="button" class="collapsible">{{ task.task }}</button>
+        <div class="content">
+            <textarea rows="10" cols="200">{{ task.detail }}</textarea>
+            <p>Deadline: {{ task.deadline }}</p>
+            <p>Created: {{ task.timestamp }}</p>
+        </div>
         {% endif %}
     {% endfor %}
     <script>
