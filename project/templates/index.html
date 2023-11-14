@@ -28,12 +28,12 @@
         <tbody>
             {% for task in tasks %}
             <tr>
-                <td>{{ task.task }}</td>
-                <td>{{ task.deadline }}</td>
-                <td>{{ task.timestamp }}</td>
-            </tr>
-            <tr>
-                <td>{{ task.task }}</td>
+                <td>        <button type="button" class="collapsible">{{ task.task }}</button>
+                    <div class="content">
+                        <textarea rows="10" cols="200">{{ task.detail }}</textarea>
+                        <p>Deadline: {{ task.deadline }}</p>
+                        <p>Created: {{ task.timestamp }}</p>
+                    </div></td>
                 <td>{{ task.deadline }}</td>
                 <td>{{ task.timestamp }}</td>
             </tr>
