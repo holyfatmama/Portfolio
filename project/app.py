@@ -14,7 +14,7 @@ def index():
     if request.method == "POST":
         id = request.form.get("id")
         db.execute("DELETE FROM tasks WHERE id = ?", id)
-        return redirect ("index.html", tasks = tasks)
+        return redirect("/")
     else:
         return render_template("index.html", tasks = tasks)
 
@@ -29,6 +29,6 @@ def addtask():
         if not importance:
             importance = 0
         db.execute("INSERT INTO tasks (task, detail, importance, deadline) VALUES (?, ?, ?, ?)", task, detail, importance, deadline)
-        return redirect("index.html", tasks = tasks)
+        return redirect("/")
     else:
         return render_template("addtask.html", tasks = tasks)
