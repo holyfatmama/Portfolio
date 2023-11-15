@@ -1,5 +1,4 @@
 import os
-import time
 
 from cs50 import SQL
 from flask import render_template, redirect, Flask, request, flash
