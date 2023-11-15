@@ -19,10 +19,36 @@ The main framework used in coding/developing this project. I chose this framewor
 The database to store the tasks are inside tasks.db
 
 Which the structure is as such:
-#### 1.'id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-#### 2.'task' TEXT NOT NULL,
-#### 3.'detail' TEXT,
-#### 4.'importance' BOOLEAN,
-#### 5.'deadline' NUMERIC NOT NULL,
+#### 1.'id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL
+1) id is the primary key that is in autoincrement of the database
+#### 2.'task' TEXT NOT NULL
+2) Task contains the title of the task, which is a required field
+#### 3.'detail' TEXT
+3) detail contains the details of the task, which is optional should the user decide to input the details
+#### 4.'importance' BOOLEAN
+4) importance, a boolean value allows the user to specify if the task is important
+#### 5.'deadline' NUMERIC NOT NULL
+5) deadline, used to store the deadline of the task in YYYY-MM-DD format
 #### 6.'timestamp' INTEGER DEFAULT CURRENT_TIMESTAMP)
+6) timestamp, contains the time that the task is created
 
+### Layout.html
+Contains the basic layout of the webpage created, which index.html and addtask.html are extended from. Majority of the layout is brought forward from PSET9.
+
+### Index.html
+The homepage of the web application. Displays all remaining tasks and also allows the user to mark “completed” in the top right hand corner which will remove the selected task from the database.
+
+For the layout of displaying each task, I chose to do a collapsible as some of the details added may be longer than others which can ruin the layout of the webpage if I were to display all the details for all of the tasks. This makes the layout of the display of tasks cleaner and more functional.
+
+Additionally the table can be arranged according to the task name, the importance, the deadline or the time that it was created, in ascending or descending order.
+
+Some scripts are also added to make the table more interactive such as the sortablejs script and the collapsible script.
+
+### Addtask.html
+Allows the user to add new tasks into the database. Users are needed to add in a mandatory title, details of the task optionally, if the task is important and the deadline of the task.
+
+### Styles.css
+Contains the styles used in the html web pages, brought forward from PSET9
+
+### Favicon.ico
+An alien for the icon of the webpage.
