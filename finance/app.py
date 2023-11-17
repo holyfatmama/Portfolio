@@ -21,7 +21,6 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///finance.db")
 
-
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
@@ -39,7 +38,6 @@ def index():
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
-
     grand_total = cash
 
     for stock in stocks:
@@ -51,7 +49,6 @@ def index():
         grand_total += stock["value"]
 
     return render_template("index.html", stocks=stocks, cash=cash, grand_total=grand_total)
-
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
@@ -101,7 +98,6 @@ def history():
 
     return render_template("history.html",  transactions = transactions)
 
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
@@ -137,7 +133,6 @@ def login():
     else:
         return render_template("login.html")
 
-
 @app.route("/logout")
 def logout():
     """Log user out"""
@@ -147,7 +142,6 @@ def logout():
 
     # Redirect user to login form
     return redirect("/")
-
 
 @app.route("/quote", methods=["GET", "POST"])
 @login_required
@@ -161,7 +155,6 @@ def quote():
         return render_template("quote.html", quote=quote)
     else:
         return render_template("quote.html")
-
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -210,7 +203,6 @@ def register():
     else:
         return render_template("register.html")
 
-
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
@@ -232,7 +224,6 @@ def sell():
             return apology("Please input a correct amount")
         else:
             shares = int(shares)
-
 
         for stock in stocks:
             if symbol == stock["symbol"]:
