@@ -245,19 +245,3 @@ def sell():
 
     else:
         return render_template("sell.html", stocks=stocks)
-
-# @app.route("/addcash", methods=["GET", "POST"])
-# def addcash():
-#    if request.method == "POST":
-        amount = request.form.get("amount")
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
-        newcash = float(amount) + cash
-
-        if float(amount) <= 0:
-            return apology("Please enter a correct amount")
-        else:
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", newcash, session["user_id"])
-            flash(f"Added {usd(float(amount))}!")
-        return redirect("/")
-#    else:
-        return render_template("addcash.html")
