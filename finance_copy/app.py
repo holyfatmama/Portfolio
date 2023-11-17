@@ -21,6 +21,7 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///finance.db")
 
+
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
@@ -28,6 +29,7 @@ def after_request(response):
     response.headers["Expires"] = 0
     response.headers["Pragma"] = "no-cache"
     return response
+
 
 @app.route("/")
 @login_required
@@ -49,6 +51,7 @@ def index():
         grand_total += stock["value"]
 
     return render_template("index.html", stocks=stocks, cash=cash, grand_total=grand_total)
+
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
