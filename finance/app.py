@@ -245,7 +245,7 @@ def sell():
         session["user_id"],
     )
     if request.method == "POST":
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0][
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0][`
             "cash"
         ]
 
@@ -283,7 +283,9 @@ def sell():
                         -shares,
                         quote["price"],
                     )
-                    flash(f"Sold {shares} share(s) of {symbol} for USD ${price}!")
+                    flash(
+                        f" Sold {shares} share(s) of {symbol} for USD ${quote[price]}!"
+                    )
                     return redirect("/")
 
     else:
