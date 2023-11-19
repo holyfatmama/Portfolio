@@ -284,7 +284,7 @@ def sell():
                         quote["price"],
                     )
                     flash(
-                        f" Sold {shares} share(s) of {symbol} for USD ${usd(price)}!"
+                        f" Sold {shares} share(s) of {symbol} for USD ${price}!"
                     )
                     return redirect("/")
 
