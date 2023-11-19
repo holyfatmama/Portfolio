@@ -270,6 +270,7 @@ def sell():
                     if quote is None:
                         return apology("please enter correct symbol")
                     total_sale = quote["price"] * shares
+                    cash += total_sale
 
                     db.execute(
                         "UPDATE users SET cash = ? WHERE id = ?",
