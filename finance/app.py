@@ -269,8 +269,8 @@ def sell():
                     quote = lookup(stock["symbol"])
                     if quote is None:
                         return apology("please enter correct symbol")
-                    stock["total_value_sell"] = quote["price"] * shares
-                    cash += stock["total_value_sell"]
+                    total_sale = quote["price"] * shares
+
                     db.execute(
                         "UPDATE users SET cash = ? WHERE id = ?",
                         cash,
@@ -284,7 +284,7 @@ def sell():
                         quote["price"],
                     )
                     flash(
-                        f" Sold {shares} share(s) of {symbol} for USD $ {}!"
+                        f" Sold {shares} share(s) of {symbol} for USD $ {total_sale}!"
                     )
                     return redirect("/")
 
