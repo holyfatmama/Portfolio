@@ -4,8 +4,7 @@ def main():
     print(face)
 
 def convert(x):
-    y = x.replace(":)","🙂")
-    z = y.replace(":(","🙁")
-    return z
+    y = x.replace(":)","🙂").replace(":(","🙁")
+    return y
 
 main()
