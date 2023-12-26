@@ -1,5 +1,5 @@
 def main():
-    y = input()
+    y = str(input())
     convert(y)
     print(y)
 
