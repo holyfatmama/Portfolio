@@ -1,11 +1,12 @@
 def main():
-    x = input()
-    convert(x)
-    print(x)
+    message = input()
+    face = convert(message)
+    print(face)
     return
 
 def convert(x):
-    x.replace(":)","🙂")
-    return x
+    y = x.replace(":)","🙂")
+    y = x.replace(":(","🙁")
+    return y
 
 main()
