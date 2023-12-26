@@ -13,8 +13,9 @@ def dollars_to_float(d):
 
 def percent_to_float(p):
     # TODO
-    q = (float(p.replace("%","")))/100
-    return q
+    q = float(p.replace("%",""))
+    new_q = q / 100
+    return new_q
 
 
 main()
