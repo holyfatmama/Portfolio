@@ -4,8 +4,8 @@ def main():
     print(y)
 
 def convert(x):
-    x = x.replace(":)","🙂")
-    x = x.replace(":(","🙁")
+    x.replace(":)","🙂")
+    x.replace(":(","🙁")
     return x
 
 main()
