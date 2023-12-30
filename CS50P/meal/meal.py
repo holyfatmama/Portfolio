@@ -9,6 +9,7 @@ def main():
         print("dinner time")
 
 def convert(time):
+    if time [-1:-5] == 
     hours, minutes = time.split(":")
     hours = float(hours)
     minutes = float(minutes)
