@@ -1,6 +1,6 @@
 x = input("Greeting: ")
 
-answer = x.lower().split()[0]
+answer = x.strip().lower().split()[0]
 first_letter_answer = answer[0]
 
 if answer == "hello":
