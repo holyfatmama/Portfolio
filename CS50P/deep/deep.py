@@ -1,4 +1,4 @@
-x = input("What is the Answer to the Great Question of Life, the Universe, and Everything?")
+x = str(input("What is the Answer to the Great Question of Life, the Universe, and Everything?"))
 
 answer = x.strip().lower()
 
