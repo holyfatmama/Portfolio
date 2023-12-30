@@ -10,9 +10,9 @@ def main():
         print("dinner time")
 
 def convert(time):
-    hours, minutes = time.split(":", maxsplit = 2)
-    if time [-1:-5] == "p.m.":
-        hours = hours + 12
+    hours, minutes = time.split(":")
+    print(hours)
+    print(minutes)
     hours = float(hours)
     minutes = float(minutes)
     minutes = minutes / 60
