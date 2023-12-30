@@ -5,6 +5,5 @@ types = {".gif":"image/gif", ".jpg":"image/jpeg", ".jpeg":"image/jpeg", ".png":"
 for type in types:
     if file_name.endswith(type):
         print(types[type])
-        break
     else:
-        print("hello")
+        continue
