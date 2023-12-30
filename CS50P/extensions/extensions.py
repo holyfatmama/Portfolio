@@ -5,15 +5,6 @@ types = {".gif":"image/gif", ".jpg":"image/jpeg", ".jpeg":"image/jpeg", ".png":"
 for type in types:
     if file_name.endswith(type):
         print(types[type])
+        break
     else:
         print("application/octet-stream")
-
-if file_name.endswith(".gif"):
-    print("image/gif")
-elif file_name.endswith(".jpg"):
-    print("image/jpg")
-elif file_name.endswith(".jpeg"):
-    print("")
-elif file_name.endswith(".png"):
-    print("")
-
