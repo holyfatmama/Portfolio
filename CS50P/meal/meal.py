@@ -1,7 +1,6 @@
 def main():
     time = input("What time is it? ")
     answer = convert(time)
-    print(answer)
     if answer >= 7 and answer <= 8:
         print("breakfast time")
     elif answer >= 12 and answer <= 13:
@@ -11,8 +10,6 @@ def main():
 
 def convert(time):
     hours, minutes = time.split(":")
-    print(hours)
-    print(minutes)
     hours = float(hours)
     minutes = float(minutes)
     minutes = minutes / 60
