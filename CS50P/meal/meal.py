@@ -1,8 +1,7 @@
 def main():
     time = input("What time is it? ")
     answer = convert(time)
-    print(answer
-          )
+    print(answer)
     if answer >= 7 and answer <= 8:
         print("breakfast time")
     elif answer >= 12 and answer <= 13:
@@ -11,7 +10,7 @@ def main():
         print("dinner time")
 
 def convert(time):
-    hours, minutes = time.split(":")
+    hours, minutes = time.split(":", maxsplit = 2)
     if time [-1:-5] == "p.m.":
         hours = hours + 12
     hours = float(hours)
