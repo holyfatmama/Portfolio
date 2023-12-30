@@ -9,3 +9,5 @@ elif first_letter_answer == "h":
     print("$20")
 else:
     print("$100")
+
+print answer
