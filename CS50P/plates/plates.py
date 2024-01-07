@@ -11,7 +11,8 @@ def is_valid(s):
         return False
     if len(s) < 2 and len(s) > 6:
         return False
-    for i in s:
-        if 
+    if i[-1].isalpha() == True:
+        return False
+    
 
 main()
