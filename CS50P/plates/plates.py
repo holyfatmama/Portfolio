@@ -15,7 +15,8 @@ def is_valid(s):
         return False
     for i in s:
         if i.isalnum() == False:
-            return False
+            if i == 0:
+                return False
         else:
             continue
     return True
