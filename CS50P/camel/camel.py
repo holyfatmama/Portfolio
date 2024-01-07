@@ -2,6 +2,8 @@ x = input("camelCase:")
 
 for i in x:
     if i.isupper():
-        print("true")
+        print("_" + i, end = "")
     else:
-        print("False")
+        print(i, end = "")
+
+print()
