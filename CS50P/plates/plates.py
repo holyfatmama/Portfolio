@@ -19,6 +19,8 @@ def is_valid(s):
                 return False
         else:
             continue
+    for c in s:
+        if c.
     return True
 
 main()
