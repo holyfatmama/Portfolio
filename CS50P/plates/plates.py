@@ -14,7 +14,7 @@ def is_valid(s):
     if s[-1].isalpha() == True:
         return False
     for i in s:
-        if i.alphanumeric() == False:
+        if i.isalnum() == False:
             return False
         else:
             continue
