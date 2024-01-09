@@ -15,8 +15,8 @@ def is_valid(s):
         if i.isalnum() == False:
             if i == '0':
                 return False
-    for i in range(len(s)):
-        if s[i].isnumeri
+    for i in range(len(s)-1):
+        if s[i].isnumeric() == True and if s[i+1].is
     for c in s:
         if c.isalnum() == False:
             return False
