@@ -11,7 +11,7 @@ def is_valid(s):
         return False
     if len(s) < 2 or len(s) > 6:
         return False
-    for i in s:
+    # for i in s:
         if i.isalnum() == False:
             if i == '0':
                 return False
