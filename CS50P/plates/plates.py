@@ -14,7 +14,11 @@ def is_valid(s):
     if s.isalnum() == False:
         return False
     for i in range(len(s)):
-        if s[i].isdigit() and s[i] == "0":
-            
+        if s[i].isdigit():
+            if s[i] == "0":
+                return False
+            else:
+                break
+    return True
 
 main()
