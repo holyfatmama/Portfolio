@@ -12,7 +12,7 @@ def is_valid(s):
     if len(s) < 2 or len(s) > 6:
         return False
     for i in s:
-        if i.isalpha() == False and i == '0':
+        if i == '0':
             break
         return False
     for i in range(len(s)-1):
