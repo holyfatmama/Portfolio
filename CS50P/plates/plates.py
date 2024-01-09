@@ -12,8 +12,11 @@ def is_valid(s):
     if len(s) < 2 or len(s) > 6:
         return False
     for i in range(len(s)):
-        if i.isdigit():
-            s[i:].
+        if s[i].isdigit() == True:
+            if int(s[i]) == 0:
+                return False
+        else:
+            break
     for i in range(len(s)-1):
         if s[i].isdigit() == True and s[i+1].isdigit() == False:
             return False
