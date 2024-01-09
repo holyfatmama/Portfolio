@@ -11,11 +11,13 @@ def is_valid(s):
         return False
     if len(s) < 2 or len(s) > 6:
         return False
-    for i in s:
-        if i.isalpha() == False and i == '0':
-            return False
-        else:
-            break
+    i = 0
+    while i < len(s):
+        if s[i].isalpha() == False:
+            if s[i] == "0":
+                return False
+            else:
+                break
     for i in range(len(s)-1):
         if s[i].isnumeric() == True and s[i+1].isnumeric() == False:
             return False
