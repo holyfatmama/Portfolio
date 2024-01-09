@@ -12,8 +12,9 @@ def is_valid(s):
     if len(s) < 2 or len(s) > 6:
         return False
     for i in s:
-        if i.isdigit() == True and i == '0':
-            return False
+        if i.isdigit() == True:
+            if i == '0':
+                return False
         else:
             break
     for i in range(len(s)-1):
