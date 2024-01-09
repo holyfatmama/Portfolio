@@ -17,7 +17,7 @@ def is_valid(s):
         else:
             break
     for i in range(len(s)-1):
-        if s[i].isnumeric() == True and s[i+1].isalpha() == True:
+        if s[i].isnumeric() == True and s[i+1].isnumeric() == False:
             return False
     for c in s:
         if c.isalnum() == False:
