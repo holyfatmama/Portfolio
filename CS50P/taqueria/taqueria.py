@@ -10,11 +10,12 @@ prices = {
     "Tortilla Salad": 8.00
 }
 
-item = input("Item: ").title()
-
-if item in prices:
-    total_price = 0
-    total_price += prices[item]
-
+while True:
+    try:
+        item = input("Item: ").title()
+        total_price = 0
+        total_price = 
+    except EOFError:
+        print(total_price)
 
 
