@@ -9,6 +9,6 @@ while True:
         else:
             grocery_list.update({item:1})
     except EOFError:
-        for item in grocery_list:
+        for item in sorted(grocery_list):
             print(f"{grocery_list[item]} {item}".upper())
         break
