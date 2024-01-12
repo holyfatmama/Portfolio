@@ -15,5 +15,7 @@ while True:
                 else:
                     print(f"{int(percentage)}%")
                     break
+            except:
+                print("error")
     except:
         print("Error")
