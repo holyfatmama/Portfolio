@@ -16,7 +16,7 @@ while True:
         item = input("Item: ").title()
         if item in prices:
             total_price = total_price + float(prices[item])
-            print(f"${total_price:,.2f}")
+            print(f"${total_price:.2f}")
     except EOFError:
         print()
         break
