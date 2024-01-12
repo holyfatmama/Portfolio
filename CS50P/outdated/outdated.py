@@ -15,7 +15,7 @@ months = [
 
 x = input("Date: ")
 
-month, day, year = x.split("/")
+month, day, year = x.split(" ")
 print(month, day, year)
 
 if month not in months:
