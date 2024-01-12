@@ -7,7 +7,7 @@ while True:
     try:
         item = input()
         if item in grocery_list:
-            grocery_list.update(item = int(grocery_list[item]) + 1)
+            grocery_list.update(item = "int(grocery_list[item]) + 1")
             print(grocery_list[item])
         else:
             grocery_list.update(item = 1)
