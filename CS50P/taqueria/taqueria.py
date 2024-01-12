@@ -10,12 +10,13 @@ prices = {
     "Tortilla Salad": 8.00
 }
 
+total_price = 0
 while True:
     try:
         item = input("Item: ").title()
-        total_price = 0
         total_price = total_price + prices[item]
     except EOFError:
-        print(total_price)
+        total_price = round(total_price, 2)
+        print(f"${total_price}")
 
 
