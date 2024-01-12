@@ -20,7 +20,6 @@ print(month, day, year)
 
 if month not in months:
     print("error")
-if 
 if int(day) > 31:
     print("error")
 
