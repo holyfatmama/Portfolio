@@ -1,10 +1,10 @@
 x = input("Date: ")
 
-month, day, year = x.split()
+month, day, year = x.split("/")
 print(month, day, year)
 
-if month > 12:
+if int(month) > 12:
     print("error")
-if day > 31:
+if int(day) > 31:
     print("error")
 
