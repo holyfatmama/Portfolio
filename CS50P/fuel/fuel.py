@@ -3,7 +3,7 @@ while True:
         xx = input("Fraction: ")
         x, y = xx.split("/")
         output = int(x) / int (y)
-        percentage = output * 100
+        percentage = round(output,2) * 100
         if 0 <= percentage <= 100:
             try:
                 if 0 <= percentage <= 1:
