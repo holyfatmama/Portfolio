@@ -1,6 +1,6 @@
 x = input("Date: ")
 
-month, day, year = x.split("/"|"")
+month, day, year = x.split("/|")
 print(month, day, year)
 
 if int(month) > 12:
