@@ -4,12 +4,10 @@ while True:
         x, y = xx.split("/")
         output = int(x) / int (y)
         percentage = output * 100
-        if output > 1:
-            
-        if output == 0:
+        if 0 <= output <= 1:
             print("E")
             break
-        elif output == 100:
+        elif 99 <= output <= 100:
             print("F")
             break
         else:
