@@ -16,6 +16,7 @@ while True:
         item = input("Item: ").title()
         if item in prices:
             total_price = total_price + float(prices[item])
+            print(f"${round(total_price,2)}")
             print(f"${total_price:,.2f}")
     except EOFError:
         print()
