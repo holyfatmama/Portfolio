@@ -11,3 +11,4 @@ while True:
     except EOFError:
         for item in grocery_list:
             print(f"{grocery_list[item]} {item}".upper())
+        break
