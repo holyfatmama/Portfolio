@@ -13,16 +13,16 @@ months = [
     "December"
 ]
 
-x = input("1:")
+x = input("date:")
 
 try:
-    if x[0].isnumeric:
-        month, day, year = x.split("/")
-        print(month, day, year)
+    month, day, year = date.split("/")
+    if (1 <= month <= 12) and (1 <= day <= 31):
+        print(year, month, da)
 except:
-    print("error")
-
-if x[0].isdigit == False:
-    x = x.strip(",")
-    month = x.split()
-    print(month)
+    try:
+        date = date.strip(",")
+        month, day, year = date.split()
+        print(month)
+    except:
+        print("error")
