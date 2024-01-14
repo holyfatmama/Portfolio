@@ -13,4 +13,9 @@ months = [
     "December"
 ]
 
+x = input()
+
+if x[0].isdigit:
+    month, day, year = x.strip("/")
+
 
