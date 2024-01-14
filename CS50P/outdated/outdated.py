@@ -19,4 +19,6 @@ if x[0].isdigit:
     print(month, day, year)
 
 if x[0].isalpha:
-
+    x = x.replace(","," ")
+    month, day, year = x.split(" ")
+    print(month, day, year)
