@@ -26,6 +26,7 @@ except:
         date2 = date.replace("," , "")
         month, day, year = date2.split()
         if month in months:
-            print(f"{year}/{day:.2f}/{months.index(month) + 1:.2f}")
+            print(months.index(month) + 1)
+            print(f"{year}/{day:.02}/{month}")
     except:
         print("error2")
