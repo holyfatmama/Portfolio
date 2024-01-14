@@ -14,11 +14,15 @@ months = [
 ]
 
 x = input("1:")
-if x[0].isdigit:
-    month, day, year = x.split("/")
-    print(month, day, year)
 
-if x[0].isalpha:
+try:
+    if x[0].isnumeric:
+        month, day, year = x.split("/")
+        print(month, day, year)
+except:
+    print("error")
+
+if x[0].isdigit == False:
     x = x.strip(",")
-    month, day, year = x.split()
-    print(month, day, year)
+    month = x.split()
+    print(month)
