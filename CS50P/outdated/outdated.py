@@ -23,10 +23,10 @@ try:
         print("error1")
 except:
     try:
-        date = date.strip(",")
-        month, day, year = date.split()
+        date2 = date.strip(",")
+        print(date)
+        month, day, year = date2.split()
         if month in months:
-            print(months.index(month) + 1)
-        print(month)
+            print(f"{year}/{day}/{months.index(month) + 1}")
     except:
         print("error2")
