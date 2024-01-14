@@ -17,5 +17,5 @@ x = input()
 
 if x[0].isdigit:
     month, day, year = x.strip("/")
-
+    print(month, day, year)
 
