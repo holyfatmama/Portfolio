@@ -13,9 +13,9 @@ months = [
     "December"
 ]
 
-x = input()
+x = input("1:")
 
 if x[0].isdigit:
-    month, day, year = x.strip("/")
+    month, day, year = x.split("/")
     print(month, day, year)
 
