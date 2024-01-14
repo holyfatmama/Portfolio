@@ -20,7 +20,7 @@ while True:
             month, day, year = date.split("/")
             if (1 <= int(month) <= 12) and (1 <= int(day) <= 31):
                 print(f"{year}-{int(month):02}-{int(day):02}")
-                pass
+                break
         except:
             try:
                 date2 = date.replace("," , "")
@@ -28,7 +28,7 @@ while True:
                 if month in months:
                     month = (months.index(month) + 1)
                     print(f"{year}/{month:02}/{int(day):02}")
-                    pass
+                    break
             except:
                  print()
                  pass
