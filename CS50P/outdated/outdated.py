@@ -18,7 +18,7 @@ date = input("date:")
 try:
     month, day, year = date.split("/")
     if (1 <= int(month) <= 12) and (1 <= int(day) <= 31):
-        print(year, month, day)
+        print(f"{year}-{int(month):02}-{int(day):02}")
     else:
         print("error1")
 except:
