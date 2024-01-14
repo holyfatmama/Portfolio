@@ -13,12 +13,14 @@ months = [
     "December"
 ]
 
-x = input("date:")
+date = input("date:")
 
 try:
     month, day, year = date.split("/")
-    if (1 <= month <= 12) and (1 <= day <= 31):
-        print(year, month, da)
+    if (1 <= int(month) <= 12) and (1 <= int(day) <= 31):
+        print(year, month, day)
+    else:
+        print("error")
 except:
     try:
         date = date.strip(",")
