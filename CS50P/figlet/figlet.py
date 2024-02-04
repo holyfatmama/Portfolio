@@ -1,5 +1,13 @@
-from pyfiglet import Figlet as figlet
+from pyfiglet import Figlet
+import sys
 
+
+figlet = Figlet()
 x = input("heheL")
-figlet.getFonts()
-print()
+
+if sys.argv[1] != "-f":
+    print("Invalid Usage")
+    exit()
+else:
+    figlet.setFont(font = sys.argv[2])
+    print(figlet.renderText(x))
