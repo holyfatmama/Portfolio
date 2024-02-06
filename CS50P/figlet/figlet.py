@@ -14,8 +14,8 @@ if len(sys.argv) == 1 or len(sys.argv) == 3:
             figlet.setFont(font=f)
             print(f"Output:{figlet.renderText(text)}")
         else:
-            sys.exit
             print("Invalid usage")
+            sys.exit(1)
     elif len(sys.argv) == 1:
         text = input("Input:")
         list = figlet.getFonts()
@@ -23,8 +23,10 @@ if len(sys.argv) == 1 or len(sys.argv) == 3:
         figlet.setFont(font=f)
         print(f"Output:{figlet.renderText(text)}")
     else:
-        sys.exit
         print("Invalid usage")
+        sys.exit(1)
+
 else:
-    sys.exit
     print("Invalid usage")
+    sys.exit(1)
+
