@@ -4,10 +4,12 @@ import sys
 
 figlet = Figlet()
 
-text = input("heheL")
+text = input("Input:")
 
 if len(sys.argv) == 1 or len(sys.argv) == 3:
     if len(sys.argv) == 3:
         f = sys.argv[2]
         figlet.setFont(font=f)
+        print(figlet.renderText(text))
+    else:
         print(figlet.renderText(text))
