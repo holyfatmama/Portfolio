@@ -16,3 +16,5 @@ if len(sys.argv) == 1 or len(sys.argv) == 3:
         f = random.choice(list)
         figlet.setFont(font=f)
         print(figlet.renderText(text))
+else:
+    sys.exit
