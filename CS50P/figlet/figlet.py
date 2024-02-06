@@ -1,6 +1,6 @@
 from pyfiglet import Figlet
 import sys
-
+import random
 
 figlet = Figlet()
 
@@ -12,4 +12,7 @@ if len(sys.argv) == 1 or len(sys.argv) == 3:
         figlet.setFont(font=f)
         print(figlet.renderText(text))
     else:
+        list = figlet.getFonts()
+        f = random.choice(list)
+        figlet.setFont(font=f)
         print(figlet.renderText(text))
