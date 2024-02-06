@@ -11,12 +11,15 @@ if len(sys.argv) == 1 or len(sys.argv) == 3:
         f = sys.argv[2]
         figlet.setFont(font=f)
         print(f"Output:{figlet.renderText(text)}")
-    else:
+    elif len(sys.argv) == 1:
         text = input("Input:")
         list = figlet.getFonts()
         f = random.choice(list)
         figlet.setFont(font=f)
         print(f"Output:{figlet.renderText(text)}")
+    else:
+        sys.exit
+        print("Invalid usage")
 else:
     sys.exit
     print("Invalid usage")
