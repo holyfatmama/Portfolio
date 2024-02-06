@@ -7,4 +7,4 @@ x = input("heheL")
 
 if len(sys.argv) == 1 or len(sys.argv) == 3:
     font = sys.argv[1]
-    
+    print(figlet.getFonts())
