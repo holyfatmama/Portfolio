@@ -2,8 +2,7 @@ import random
 
 
 def main():
-    get_level()
-    generate_integer(1)
+    generate_integer(get_level())
 
 
 def get_level():
@@ -23,18 +22,15 @@ def generate_integer(level):
         x = random.randint(1, 10)
         y = random.randint(1, 10)
         z = x + y
-        print(f"{x} + {y}:", end=" ")
-        answer = int(input(""))
-        answer_count = 0
-        if answer_count < 3:
+        for i in range(3):
+            print(f"{x} + {y}:", end=" ")
+            answer = int(input(""))
             if answer == z:
                 count +=1
-                answer_count = 0
                 print("correct")
+                break
             else:
-                answer_count += 1
                 print("eee")
-                answer = int(input("reasnwer"))
     print(f"Score: {count}")
 
 
