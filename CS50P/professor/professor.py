@@ -26,10 +26,11 @@ def generate_integer(level):
         print(f"{x} + {y}:", end=" ")
         answer = int(input(""))
         answer_count = 0
-        while answer_count < 3:
+        if answer_count < 3:
             if answer == z:
                 count +=1
-                continue
+                answer_count = 0
+                print("correct")
             else:
                 answer_count += 1
                 print("eee")
