@@ -12,10 +12,10 @@ while True:
         print("please input an integer")
 
 answer = random.randint(1, level)
-guess = int(input("Guess: "))
 
 while True:
     try:
+        guess = int(input("Guess: "))
         if guess > answer:
             print("Too Large!")
             guess = int(input("Guess: "))
