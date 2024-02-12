@@ -17,10 +17,10 @@ guess = int(input("Guess: "))
 while True:
     if guess > answer:
         print("Too Large!")
-        guess = int(input("guess: "))
+        guess = int(input("Guess: "))
     if guess < answer:
         print("Too Small!")
-        guess = int(input("guess: "))
+        guess = int(input("Guess: "))
     else:
-        print("Correct!")
+        print("Just Right!")
         break
