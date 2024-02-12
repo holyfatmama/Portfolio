@@ -14,6 +14,7 @@ if int(level) > 0:
         print("correct")
     else:
         print("wrong")
+        guess = input("Guess: ")
 
 
 
