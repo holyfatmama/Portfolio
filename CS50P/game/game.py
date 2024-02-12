@@ -2,4 +2,6 @@ import random
 
 try:
     x = input()
-except:
+    assert(x > 0)
+except AssertionError:
+    
