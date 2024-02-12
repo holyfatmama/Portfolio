@@ -18,9 +18,10 @@ def get_level():
 def generate_integer(level):
     count = 0
     difficulty = [9, 99, 999]
+    difficulty_start = [0, 10, 100]
     for i in range(10):
-        x = random.randint(1, difficulty[level - 1])
-        y = random.randint(1, difficulty[level - 1])
+        x = random.randint(difficulty_start[level - 1], difficulty[level - 1])
+        y = random.randint(difficulty_start[level - 1], difficulty[level - 1])
         z = x + y
         for i in range(3):
             print(f"{x} + {y}:", end=" ")
