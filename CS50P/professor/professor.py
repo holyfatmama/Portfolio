@@ -31,6 +31,7 @@ def generate_integer(level):
                 break
             else:
                 print("eee")
+
     print(f"Score: {count}")
 
 
