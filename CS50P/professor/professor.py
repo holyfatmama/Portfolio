@@ -27,7 +27,6 @@ def generate_integer(level):
         answer = int(input(""))
         answer_count = 0
         while answer_count < 3:
-            answer = int(input(""))
             if answer == z:
                 count += 1
                 continue
