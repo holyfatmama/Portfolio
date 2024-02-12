@@ -3,9 +3,11 @@ import random
 
 while True:
     try:
-        level = int(input("level: "))
+        level = int(input("Level: "))
         if level > 0:
             break
+        else:
+            level = int(input("Level: "))
     except ValueError:
         print("please input an integer")
 
@@ -20,5 +22,5 @@ while True:
         print("Too Small!")
         guess = int(input("guess: "))
     else:
-        print("correct!")
+        print("Correct!")
         break
