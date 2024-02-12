@@ -24,7 +24,7 @@ def generate_integer(level):
         y = random.randint(difficulty_start[level - 1], difficulty[level - 1])
         z = x + y
         for i in range(3):
-            print(f"{x} + {y}:", end=" ")
+            print(f"{x} + {y} =", end=" ")
             try:
                 answer = int(input(""))
                 if answer == z:
