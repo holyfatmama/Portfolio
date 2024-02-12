@@ -7,6 +7,7 @@ while True:
         if level > 0:
             break
         else:
+            print("please input positive integer")
             level = int(input("Level: "))
     except ValueError:
         print("please input an integer")
