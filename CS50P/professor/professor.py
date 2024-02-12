@@ -35,6 +35,5 @@ def generate_integer(level):
     print(f"Score: {count}")
 
 
-
 if __name__ == "__main__":
     main()
