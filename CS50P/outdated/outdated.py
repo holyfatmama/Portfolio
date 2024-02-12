@@ -23,6 +23,7 @@ while True:
                 break
         except:
             try:
+                month
                 date2 = date.replace("," , "")
                 month, day, year = date2.split()
                 if month in months and 1 <= int(day) <= 31:
