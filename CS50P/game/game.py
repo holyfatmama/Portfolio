@@ -9,3 +9,6 @@ while True:
     except ValueError:
         print("please input an integer")
 
+answer = random.randint(1, level)
+
+while 
