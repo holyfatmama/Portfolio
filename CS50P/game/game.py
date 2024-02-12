@@ -1,7 +1,8 @@
 import random
 
-try:
-    x = input()
-    assert(x > 0)
-except AssertionError:
-    
+level = input("Level: ")
+
+if level > 0:
+    answer = 
+    guess = input("Guess: ")
+
