@@ -24,6 +24,7 @@ def generate_integer(level):
         y = random.randint(1, 10)
         z = x + y
         print(f"{x} + {y}:", end=" ")
+        answer = int(input(""))
         answer_count = 0
         while answer_count < 3:
             answer = int(input(""))
