@@ -23,11 +23,14 @@ while True:
                 break
         except:
             try:
-                date2 = date.replace("," , "")
-                month, day, year = date2.split()
-                if month in months and 1 <= int(day) <= 31:
-                    month = (months.index(month) + 1)
-                    break
+                if "," in date:
+                    date2 = date.replace("," , "")
+                    month, day, year = date2.split()
+                    if month in months and 1 <= int(day) <= 31:
+                        month = (months.index(month) + 1)
+                        break
+                else:
+                    print("hehexd2")
             except:
                  print("hehexd")
 
