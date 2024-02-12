@@ -9,6 +9,6 @@ while True:
         names.append(name)
     except EOFError:
         print()
-        print("Adieu, Adieu, to", p.join(names))
+        print("Adieu, adieu, to", p.join(names))
         break
 
