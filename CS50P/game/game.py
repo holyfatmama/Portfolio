@@ -15,12 +15,15 @@ answer = random.randint(1, level)
 guess = int(input("Guess: "))
 
 while True:
-    if guess > answer:
-        print("Too Large!")
-        guess = int(input("Guess: "))
-    if guess < answer:
-        print("Too Small!")
-        guess = int(input("Guess: "))
-    else:
-        print("Just Right!")
-        break
+    try:
+        if guess > answer:
+            print("Too Large!")
+            guess = int(input("Guess: "))
+        if guess < answer:
+            print("Too Small!")
+            guess = int(input("Guess: "))
+        else:
+            print("Just Right!")
+            break
+    except ValueError:
+        print("please input an integer")
