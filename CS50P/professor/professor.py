@@ -22,15 +22,19 @@ def generate_integer(level):
         x = random.randint(1, 10)
         y = random.randint(1, 10)
         z = x + y
-        for i in range(3):
-            print(f"{x} + {y}:", end=" ")
-            answer = int(input(""))
-            if answer == z:
-                count +=1
-                print("correct")
-                break
-            else:
-                print("eee")
+        while True:
+            try:
+                for i in range(3):
+                    print(f"{x} + {y}:", end=" ")
+                    answer = int(input(""))
+                    if answer == z:
+                        count +=1
+                        print("correct")
+                        break
+                else:
+                    print("eee")
+            except ValueError:
+                print("pleasepleaseplease")
 
     print(f"Score: {count}")
 
