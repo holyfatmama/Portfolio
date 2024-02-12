@@ -24,13 +24,16 @@ def generate_integer(level):
         z = x + y
         for i in range(3):
             print(f"{x} + {y}:", end=" ")
-            answer = int(input(""))
-            if answer == z:
-                count +=1
-                print("correct")
-                break
-            else:
-                print("eee")
+            try:
+                answer = int(input(""))
+                if answer == z:
+                    count +=1
+                    print("correct")
+                    break
+                else:
+                    print("eee")
+            except ValueError:
+                print("EEE")
 
 
     print(f"Score: {count}")
