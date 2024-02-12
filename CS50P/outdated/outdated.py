@@ -32,4 +32,4 @@ while True:
                  print("hehexd")
 
 
-print(f"{int(year)}-{int(month):02}-{int(day):02}")
+print(f"{int(year):02}-{int(month):02}-{int(day):02}")
