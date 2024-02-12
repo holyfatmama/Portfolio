@@ -6,7 +6,8 @@ names = []
 while True:
     try:
         name = input("Name: ")
-        names.appened(name)
+        names.append(name)
     except EOFError:
-        print("Adieu, Adieu, to", )
+        print("Adieu, Adieu, to", p.join(names))
+        break
 
