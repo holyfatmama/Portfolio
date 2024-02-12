@@ -8,16 +8,15 @@ while True:
             break
         else:
             print("please input positive integer")
-            level = int(input("Level: "))
     except ValueError:
         print("please input an integer")
 
 answer = random.randint(1, level)
-guess = int(input("guess: "))
+guess = int(input("Guess: "))
 
 while True:
     if guess > answer:
-        print("Too Large")
+        print("Too Large!")
         guess = int(input("guess: "))
     if guess < answer:
         print("Too Small!")
