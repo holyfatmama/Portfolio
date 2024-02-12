@@ -32,7 +32,7 @@ def generate_integer(level):
                     print("correct")
                     break
                 else:
-                    print("eee")
+                    print("EEE")
             except ValueError:
                 print("EEE")
 
