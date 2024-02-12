@@ -24,11 +24,7 @@ def generate_integer(level):
         z = x + y
         for i in range(3):
             print(f"{x} + {y}:", end=" ")
-            try:
-                answer = int(input(""))
-            except ValueError:
-                print("please input integer:")
-                answer = int(input(""))
+            answer = int(input(""))
             if answer == z:
                 count +=1
                 print("correct")
