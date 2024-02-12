@@ -8,8 +8,7 @@ while True:
         w = r.json()
 
         amount = w["bpi"]["USD"]["rate"]
-        amount = float(amount)
-        print(amount)
+        print(w)
         break
 
     except requests.RequestException:
