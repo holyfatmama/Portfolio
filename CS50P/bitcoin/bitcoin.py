@@ -6,6 +6,7 @@ import sys
 r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
 q = r.text
 w = json.loads(q)
-print(w)
+print(w["bpi"]["USD"]["rate"])
+
 #except requests.RequestException:
 
