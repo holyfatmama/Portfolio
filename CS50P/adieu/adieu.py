@@ -8,6 +8,7 @@ while True:
         name = input("Name: ")
         names.append(name)
     except EOFError:
+        print()
         print("Adieu, Adieu, to", p.join(names))
         break
 
