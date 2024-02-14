@@ -14,8 +14,6 @@ while True:
                 r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
                 data = r.json()
                 print(json.dumps(r.json(), indent = 2))
-                print(r)
-                print(data)
                 break
             except ValueError:
                 print("Command-line argument is not a number")
