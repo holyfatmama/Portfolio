@@ -7,10 +7,13 @@ while True:
         amount = sys.argv[1]
         try:
             r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-            print(r.json)
-            print(r.json.text)
+            bitcoin = r.json()
+            price = bitcoin["bpi"]["USD"]["rate"]
+            x = float(price)
+            print(price)
             break
         except requests.RequestException:
             sys.exit()
     except:
         print("please input correct arguments")
+        break
