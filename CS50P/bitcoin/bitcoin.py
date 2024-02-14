@@ -7,9 +7,7 @@ while True:
         amount = sys.argv[1]
         try:
             r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-            w = r.json()
-            amount = w["bpi"]["USD"]["rate"]
-            print(w)
+            print(r.json)
             break
         except requests.RequestException:
             sys.exit()
