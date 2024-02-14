@@ -8,6 +8,7 @@ while True:
         try:
             r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
             print(r.json)
+            print(r.json.text)
             break
         except requests.RequestException:
             sys.exit()
