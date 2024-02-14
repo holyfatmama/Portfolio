@@ -6,16 +6,17 @@ import sys
 while True:
     try:
         if len(sys.argv) != 2:
-            print("please input correct amount of arguments")
-            sys.exit()
+            print("Missing command-line argument")
+            sys.exit(1)
         else:
             try:
                 amount = float(sys.argv[1])
+                
                 print("okay")
                 break
             except ValueError:
-                print("please input correct arguments")
-                sys.exit()
+                print("Command-line argument is not a number")
+                sys.exit(1)
     except requests.RequestException:
-        sys.exit()
+        sys.exit(1)
 
