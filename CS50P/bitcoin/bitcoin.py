@@ -13,6 +13,7 @@ while True:
                 amount = float(sys.argv[1])
                 r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
                 data = r.json()
+                print(json.dumps(r.json(), indent = 2))
                 print(r)
                 print(data)
                 break
