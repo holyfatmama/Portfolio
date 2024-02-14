@@ -16,7 +16,7 @@ while True:
                 price = data["bpi"]["USD"]["rate_float"]
                 amount = number * price
                 print(f"${amount:,.4f}")
-                break
+                sys.exit(0)
             except ValueError:
                 print("Command-line argument is not a number")
                 sys.exit(1)
