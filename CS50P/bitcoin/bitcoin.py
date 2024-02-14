@@ -2,20 +2,20 @@ import requests
 import json
 import sys
 
+
 while True:
     try:
-        amount = sys.argv[1]
-        try:
-            r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-            bitcoin = r.json()
-            price = bitcoin["bpi"]["USD"]["rate"]
-            total = int(amount) * float(price)
-            print(amount)
-            print(price)
-            print(total)
-            break
-        except requests.RequestException:
+        if len(sys.argv) != 2:
+            print("please input correct amount of arguments")
             sys.exit()
-    except:
-        print("please input correct arguments")
-        break
+        else:
+            try:
+                amount = float(sys.argv[1])
+                print("okay")
+                break
+            except ValueError:
+                print("please input correct arguments")
+                sys.exit()
+    except requests.RequestException:
+        sys.exit()
+
