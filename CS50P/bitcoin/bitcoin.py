@@ -11,8 +11,9 @@ while True:
         else:
             try:
                 amount = float(sys.argv[1])
-                
-                print("okay")
+                r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
+
+                print(r)
                 break
             except ValueError:
                 print("Command-line argument is not a number")
